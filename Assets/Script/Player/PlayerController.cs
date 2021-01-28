@@ -5,14 +5,14 @@ using UnityEngine.Events;
 
 public class PlayerController : PhysicsObject
 {
+    [Header("Self Parts")]
+    public Animator animator;
+    public GameObject Torso, Pernas;
+
     [Header("Limits of Moviment")]
     public float CurrentSpeed = 5;
     public float NormalSpeed = 5;
     public float SlowedSpeed = 3;
-
-    [Header("Self Parts")]
-    public Transform spriteRenderer;
-    public Animator animator;
 
     [Header("Actions")]
     public UnityAction StartShooting;
@@ -36,10 +36,16 @@ public class PlayerController : PhysicsObject
         move.x = Input.GetAxis("Horizontal");
         move.y = Input.GetAxis("Vertical");
 
-        animator.SetFloat("VelocityX", Mathf.Abs(velocity.x));
-        animator.SetFloat("VelocityY", Mathf.Abs(velocity.y));
-
         targetVelocity = move * CurrentSpeed;
+
+        if(targetVelocity.magnitude != 0f)
+        {
+            animator.SetBool("Running", true);
+        }
+        else
+        {
+            animator.SetBool("Running", false);
+        }
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -50,16 +56,28 @@ public class PlayerController : PhysicsObject
         if (Input.GetMouseButtonDown(0))
         {
             StartShooting.Invoke();
+            animator.SetBool("Attacking", true);
         }
         else if (Input.GetMouseButtonUp(0))
         {
             StopShooting.Invoke();
+            animator.SetBool("Attacking", false);
         }
 
 
-        // Check Mouse Position
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // Torso olha para o Mouse
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        mousePos.Normalize();
+        float rot_z = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        Torso.transform.rotation = Quaternion.Euler(0f, 0f, rot_z + 90);
 
-     }
+        // Perna seguem movimento
+        if (targetVelocity == Vector2.zero)
+            return;
+        mousePos = targetVelocity.normalized;
+        rot_z = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        Pernas.transform.rotation = Quaternion.Euler(0f, 0f, rot_z + 90);
+
+    }
 
 }

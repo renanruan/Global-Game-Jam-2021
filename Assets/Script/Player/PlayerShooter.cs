@@ -6,6 +6,8 @@ public class PlayerShooter : MonoBehaviour
 {
     [Header("Munition")]
     public GameObject Bullet;
+    public GameObject ShootPoint1, ShootPoint2;
+    private bool Shoot1 = true;
 
     [Header("Shoot Settings")]
     public float AttackSpeed;
@@ -26,8 +28,18 @@ public class PlayerShooter : MonoBehaviour
     }
     private void Shoot()
     {
+
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        BulletIA bulletIA = Instantiate(Bullet, transform.position, Quaternion.Euler(0, 0, 0)).GetComponent<BulletIA>();
+        BulletIA bulletIA;
+        if (Shoot1)
+        {
+            bulletIA = Instantiate(Bullet, ShootPoint1.transform.position, Quaternion.Euler(0, 0, 0)).GetComponent<BulletIA>();
+        }
+        else
+        {
+            bulletIA = Instantiate(Bullet, ShootPoint2.transform.position, Quaternion.Euler(0, 0, 0)).GetComponent<BulletIA>();
+        }
+        Shoot1 = !Shoot1;
         bulletIA.ConfigureDirection((mousePos-(Vector2)transform.position).normalized);
     }
 

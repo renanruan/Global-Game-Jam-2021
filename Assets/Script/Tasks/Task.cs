@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Task : MonoBehaviour
 {
+    [Header("Self Parts")]
+    public Animator anim;
+
     [Header("State Machine")]
     public bool IsAvailable = false;
     public bool InContact = false;
@@ -19,10 +22,10 @@ public class Task : MonoBehaviour
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             InContact = true;
+            anim.SetBool("Collided", InContact);
         }
     }
 
@@ -30,7 +33,8 @@ public class Task : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            InContact = true;
+            InContact = false;
+            anim.SetBool("Collided", InContact);
         }
     }
 
@@ -40,12 +44,14 @@ public class Task : MonoBehaviour
     void OnTimerTick()
     {
         IsAvailable = true;
+        anim.SetBool("Available", IsAvailable);
         TimerActive = false;
         TimerTime = 0;
     }
     void OnTaskConclusion()
     {
         IsAvailable = false;
+        anim.SetBool("Available", IsAvailable);
         TimerActive = true;
         TimerTime = Random.Range(MinTime, MaxTime);
     }
@@ -60,10 +66,23 @@ public class Task : MonoBehaviour
         {
             TimerTime -= Time.deltaTime;
 
-            if (TimerTime <= 0)
+            if (TimerTime <= 0f)
             {
                 OnTimerTick();
             }
         }
+
+        if(IsAvailable && InContact)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                OnTaskConclusion();
+            }
+        }
+    }
+
+    private void Start()
+    {
+        TimerActive = true;
     }
 }

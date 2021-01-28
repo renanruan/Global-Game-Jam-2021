@@ -7,6 +7,7 @@ public class PlayerCollision : MonoBehaviour
 {
     [Header("Actions")]
     public UnityIntAction TakeDamege = new UnityIntAction();
+    public UnityAction MechaFound;
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  RIGID BODY CALL */
@@ -16,6 +17,11 @@ public class PlayerCollision : MonoBehaviour
         if(collision.gameObject.tag == "Hazard")
         {
             TakeDamege.Invoke(10);
+        }
+
+        if (collision.gameObject.tag == "Mecha")
+        {
+            MechaFound.Invoke();
         }
     }
 

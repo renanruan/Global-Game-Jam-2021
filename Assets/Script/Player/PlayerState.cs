@@ -12,6 +12,7 @@ public class PlayerState : MonoBehaviour
     public PlayerCollision Collision;
     public PlayerHealth Health;
     public PlayerShooter Shooter;
+    public Animator animator;
 
     [Header("State")]
     public static Mode ActualMode = Mode.MechaZord;
@@ -31,6 +32,7 @@ public class PlayerState : MonoBehaviour
 
         /* EVENTOS DE COLISAO */
         Collision.TakeDamege.AddListener(Health.TakeDamage);
+        Collision.MechaFound += ChangeState;
 
         /* EVENTOS DE VIDA */
         //Health.OnDeath += ;
@@ -38,6 +40,9 @@ public class PlayerState : MonoBehaviour
 
         /* EVENTOS DE TIRO */
         //Shooter. += ;
+
+
+        animator.SetBool("MechaForm", true);
 
     }
 
@@ -51,12 +56,18 @@ public class PlayerState : MonoBehaviour
         {
 
             ActualMode = Mode.Human;
+            animator.SetBool("HumanForm", true);
+            animator.SetBool("MechaForm", false);
+            animator.SetTrigger("ChangeForm");
             EnterHumanForm.Invoke();
         }
         else//(state == Mode.Human)
         {
 
             ActualMode = Mode.MechaZord;
+            animator.SetBool("HumanForm", false);
+            animator.SetBool("MechaForm", true);
+            animator.SetTrigger("ChangeForm");
             EnterMechaForm.Invoke();
         }
 

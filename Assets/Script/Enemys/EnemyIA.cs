@@ -9,7 +9,7 @@ public class EnemyIA : MonoBehaviour
     [Header("Self Parts")]
     public SpriteRenderer sprite;
     public Animator animator;
-    public PlayerShooter Shooter;
+    public EnemyShooter Shooter;
     public EnemyHealth Health;
 
     [Header("Actions")]
