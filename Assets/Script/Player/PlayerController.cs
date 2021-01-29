@@ -9,6 +9,10 @@ public class PlayerController : PhysicsObject
     public Animator animator;
     public GameObject Torso, Pernas;
 
+    [Header("Sounds")]
+    public FMODUnity.StudioEventEmitter Engine;
+    public FMODUnity.StudioEventEmitter Shooting;
+
     [Header("Limits of Moviment")]
     public float CurrentSpeed = 5;
     public float NormalSpeed = 5;
@@ -46,6 +50,8 @@ public class PlayerController : PhysicsObject
         {
             animator.SetBool("Running", false);
         }
+
+        Engine.SetParameter("Moving", (int)move.magnitude);
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -57,11 +63,13 @@ public class PlayerController : PhysicsObject
         {
             StartShooting.Invoke();
             animator.SetBool("Attacking", true);
+            Shooting.SetParameter("Shooting", 1);
         }
         else if (Input.GetMouseButtonUp(0))
         {
             StopShooting.Invoke();
             animator.SetBool("Attacking", false);
+            Shooting.SetParameter("Shooting", 0);
         }
 
 

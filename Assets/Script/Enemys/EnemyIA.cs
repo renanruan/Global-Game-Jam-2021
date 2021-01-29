@@ -12,6 +12,12 @@ public class EnemyIA : MonoBehaviour
     public EnemyShooter Shooter;
     public EnemyHealth Health;
 
+    [Header("IA")]
+    public Transform target;
+    public float maxLookDistance;
+    public float maxAttackDistance;
+    public float minDistanceFromPlayer;
+
     [Header("Actions")]
     public UnityIntAction TakeDamege = new UnityIntAction();
     public UnityAction StartShooting;
@@ -38,6 +44,31 @@ public class EnemyIA : MonoBehaviour
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  DETECT PLAYER */
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    void Update()
+    {
+        float distance = Vector3.Distance(target.position, transform.position);
+
+        if (distance <= maxLookDistance)
+        {
+            LookAtTarget();
+
+            //Check distance and time
+            if (distance <= maxAttackDistance)
+            {
+                //Shoot();
+            }
+        }
+    }
+
+
+    void LookAtTarget()
+    {
+        var dir = target.position - transform.position;
+        dir.y = 0;
+        var rotation = Quaternion.LookRotation(dir);
+       // transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationDamping);
+    }
+
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  MOVIMENT */
@@ -62,4 +93,22 @@ public class EnemyIA : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+
+ 
+
+
+
+
+ 
+
+
+    /*
+    void Shoot()
+    {
+        //Reset the time when we shoot
+        shotTime = Time.time;
+        Instantiate(projectile, transform.position + (target.position - transform.position).normalized, Quaternion.LookRotation(target.position - transform.position));
+    }
+    */
 }

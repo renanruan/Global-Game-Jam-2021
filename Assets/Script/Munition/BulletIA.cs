@@ -8,13 +8,15 @@ public class BulletIA : MonoBehaviour
     public float Velocity;
     public float TimeSpawn;
     public Vector3 Direction = Vector3.zero;
+    public float RNGAngle;
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  INITIAL CONFIGURATION */
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     public void ConfigureDirection(Vector3 Direction)
     {
-        this.Direction = Direction;
+        RNGAngle = Random.Range(-RNGAngle, RNGAngle);
+        this.Direction = Quaternion.Euler(0, 0, RNGAngle) * Direction;
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */

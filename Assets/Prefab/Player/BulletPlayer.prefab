@@ -137,3 +137,4 @@ MonoBehaviour:
   Velocity: 10
   TimeSpawn: 1
   Direction: {x: 0, y: 0, z: 0}
+  RNGAngle: 5
