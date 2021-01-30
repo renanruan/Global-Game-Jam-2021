@@ -7,24 +7,494 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001C7C0F49198 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000294175CF1A8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] LiveUpdate::clientConnected              : client = 00000293C6ACD0E8
+[LOG] LiveUpdate::readPacket                   : Recieved init packet from client 00000293C6ACD0E8
+[LOG] LiveUpdate::readPacket                   : Accepting init message for client 00000293C6ACD0E8
+[LOG] LiveUpdate::transitionToConnected        : 
+[LOG] Manager::sendConnectTimeHash             : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::acceptInitPacket             : Client 00000293C6ACD0E8 connected, entering connected state
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2208480
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 23680
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000D002E3F5E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF80A337B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF80A337AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF80A337BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF80A337CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000029410C1A108
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='04_Step', format=5, channels=2, frequency=48000, lengthbytes=9280, lengthpcm=32000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.534001.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_0.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_0.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_1.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_1.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_2.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_2.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_3.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_3.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_4.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_4.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_5.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_5.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_6.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_6.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_7.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_7.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_8.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_8.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_9.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_9.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_10.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_10.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_11.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_11.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_12.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_12.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_13.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_13.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_14.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_14.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_15.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_15.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_16.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_16.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_17.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_17.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_18.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_18.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_19.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_19.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_20.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_20.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_21.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_21.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_22.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_22.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_23.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_23.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_24.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_24.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_25.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_25.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_26.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_26.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_27.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_27.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_28.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_28.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_29.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_29.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_30.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_30.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_31.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_31.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_32.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_32.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_33.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_33.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_34.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_34.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_35.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_35.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_36.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_36.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_37.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_37.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_38.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_38.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_39.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_39.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_40.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_40.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_41.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_41.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_42.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_42.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_43.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_43.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_44.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_44.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_45.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_45.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_46.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_46.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_47.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_47.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_48.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_48.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_49.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_49.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_50.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_50.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_51.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_51.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_52.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_52.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_53.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_53.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_54.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_54.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_55.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_55.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_56.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_56.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_57.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_57.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_58.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_58.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_59.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_59.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_60.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_60.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_61.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_61.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_62.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_62.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_63.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_63.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_64.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_64.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_65.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_65.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_66.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_66.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_67.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_67.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_68.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_68.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_69.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_69.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_70.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_70.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_71.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_71.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_72.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_72.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_73.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_73.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_74.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_74.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_75.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_75.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_76.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_76.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_77.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_77.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_78.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_78.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_79.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_79.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_80.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_80.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_81.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_81.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_82.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_82.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_83.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_83.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_84.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_84.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_85.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_85.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_86.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_86.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_87.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_87.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_88.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_88.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_89.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_89.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_90.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_90.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_91.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_91.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_92.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_92.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_93.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_93.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_94.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_94.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_95.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_95.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_96.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_96.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_97.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_97.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_98.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_98.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_99.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_99.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_100.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_100.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_101.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_101.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_102.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_102.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_103.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_103.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_104.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_104.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_105.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_105.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_106.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_106.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_107.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_107.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_108.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_108.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_109.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_109.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_110.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_110.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_111.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_111.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_112.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_112.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_113.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_113.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_114.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_114.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_115.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_115.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_116.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_116.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_117.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_117.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_118.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_118.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_119.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_119.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_120.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_120.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_121.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_121.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_122.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_122.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_123.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_123.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_124.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_124.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_125.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_125.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_126.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_126.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_127.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_127.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_128.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_128.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_129.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_129.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_130.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_130.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_131.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_131.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_132.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_132.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_133.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_133.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_134.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_134.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_135.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_135.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_136.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_136.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_137.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_137.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_138.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_138.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_139.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/Leonardo/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-FLEyPq/hotswap_139.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          :  (00000294102A96C8)
+[LOG] SoundI::release                          :     04_Step (0000029416F3CDF8)
+[LOG] SoundI::release                          :  (00000294102AE018)
+[LOG] SoundI::release                          :     03_Engine_End (0000029416F3E998)
+[LOG] SoundI::release                          :  (00000294102ACD68)
+[LOG] SoundI::release                          :     01_Engine_Start (0000029416F3F1B8)
+[LOG] SoundI::release                          :  (00000294102ABC28)
+[LOG] SoundI::release                          :     05_Engine_idle (0000029416F3BDB8)
+[LOG] SoundI::release                          :  (00000294102ABAB8)
+[LOG] SoundI::release                          :     02_Engine_Sustain (0000029416F3AA38)
+[LOG] SoundI::release                          :  (00000294102AD048)
+[LOG] SoundI::release                          :     12_machinegun_bullet_end (0000029416F40398)
+[LOG] SoundI::release                          :  (00000294102AE188)
+[LOG] SoundI::release                          :     09_machinegun_bullet_01 (0000029416F3FD18)
+[LOG] SoundI::release                          :  (00000294102ABF08)
+[LOG] SoundI::release                          :     10_machinegun_bullet_02 (0000029416F3DFD8)
+[LOG] SoundI::release                          :  (00000294102AB7D8)
+[LOG] SoundI::release                          :     11_machinegun_bullet_03 (0000029416F3ECD8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] ProfileClient::markForDead               : Closing client connection
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] FMOD_OS_Net_Read                         : Interrupted.[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
