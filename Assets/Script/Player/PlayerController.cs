@@ -55,16 +55,13 @@ public class PlayerController : PhysicsObject
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     protected override void CheckInput()
     {
-        if (PlayerState.ActualMode == PlayerState.Mode.MechaZord)
+        if (Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                StartShooting.Invoke();
-            }
-            else if (Input.GetMouseButtonUp(0))
-            {
-                StopShooting.Invoke();
-            }
+            StartShooting.Invoke();
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            StopShooting.Invoke();
         }
 
 
