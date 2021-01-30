@@ -40,6 +40,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-7360196599971824901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_machinegun_shots/Shooting
+  m_EditorClassIdentifier: 
+  Name: Shooting
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6787262646152135857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,7 +80,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -534378031612681580}
+  - {fileID: 8847701533321834617}
   MinDistance: 0
   MaxDistance: 0
   Length: 5333
@@ -79,7 +99,7 @@ MonoBehaviour:
   Path: Assets/GGJ_Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637475457015338789
+  lastModified: 637476054813368804
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -143,9 +163,29 @@ MonoBehaviour:
   Path: Assets/GGJ_Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637475457015258909
+  lastModified: 637476054813358776
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &-5197756805459584336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_machinegun_rotation/Shooting
+  m_EditorClassIdentifier: 
+  Name: Shooting
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &-3262405615597362758
 MonoBehaviour:
@@ -167,7 +207,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7275960935576161469}
+  - {fileID: -5197756805459584336}
   MinDistance: 0
   MaxDistance: 0
   Length: 3889
@@ -240,7 +280,7 @@ MonoBehaviour:
   - {fileID: -6033124470288966965}
   StringsBanks:
   - {fileID: -6709824168589382076}
-  stringsBankWriteTime: 637475457015338789
+  stringsBankWriteTime: 637476054813368804
   cacheVersion: 6
 --- !u!114 &916473295474263058
 MonoBehaviour:
@@ -262,7 +302,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 8629191319280545661}
+  - {fileID: -7360196599971824901}
   MinDistance: 0
   MaxDistance: 0
   Length: 2666
@@ -299,6 +339,26 @@ MonoBehaviour:
   m_Name: parameter:/sfx_machinegun_shots/Shooting
   m_EditorClassIdentifier: 
   Name: Shooting
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &8847701533321834617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_Engine/Moving
+  m_EditorClassIdentifier: 
+  Name: Moving
   Min: 0
   Max: 1
   Default: 0

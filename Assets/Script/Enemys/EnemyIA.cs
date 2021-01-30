@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using System.Security.Cryptography;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -19,6 +21,12 @@ public class EnemyIA : MonoBehaviour
     public float maxAttackDistance;
     public float minDistanceFromPlayer;
     public bool targetLocker;
+
+    [Header("Moviment")]
+    public Vector2 Direction;
+    public bool Moving = false;
+    public float Speed;
+    private float Timer = 0;
 
     [Header("Actions")]
     public UnityIntAction TakeDamege = new UnityIntAction();
@@ -50,24 +58,42 @@ public class EnemyIA : MonoBehaviour
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     void Update()
     {
-        float distance = Vector3.Distance(target.position, transform.position);
-
-        if (distance <= maxLookDistance)
-        {
-            LookAtTarget();
-
-            //Check distance and time
-            if (distance <= maxAttackDistance)
-            {
-                StartShooting.Invoke();
-            }
-            else
-            {
-                StopShooting.Invoke();
-            }
-        }
+        DetectPlayer();
     }
 
+    void DetectPlayer()
+    {
+        float distance = Vector3.Distance(target.position, transform.position);
+
+        // Ve player
+        if (distance <= maxLookDistance)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, target.position - transform.position, maxLookDistance, LayerMask.GetMask("Default"));
+
+            if (hit)
+            {
+                if (hit.collider.gameObject.tag == "Player")
+                {
+                    LookAtTarget();
+
+                    // Atira no player
+                    if (distance <= maxAttackDistance)
+                    {
+                        StartShooting.Invoke();
+                    }
+                    else
+                    {
+                        StopShooting.Invoke();
+                    }
+
+                    return;
+                }
+            }
+        }
+
+        Move();
+        return;
+    }
 
     void LookAtTarget()
     {
@@ -83,6 +109,67 @@ public class EnemyIA : MonoBehaviour
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  MOVIMENT */
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    public void ChangeDirection(bool forceChange)
+    {
+        Vector2 newDirection = Vector2.zero;
+
+        do
+        {
+            switch (Random.Range(0, 4))
+            {
+                case 0:
+                    newDirection = Vector2.up;
+                    break;
+                case 1:
+                    newDirection = Vector2.down;
+                    break;
+                case 2:
+                    newDirection = Vector2.right;
+                    break;
+                case 3:
+                    newDirection = Vector2.left;
+                    break;
+            }
+        } while (newDirection == Direction && forceChange);
+
+        Direction = newDirection;
+    }
+
+    public void Move()
+    {
+        Timer -= Time.deltaTime;
+
+        if(Moving)
+        {
+            transform.position += (Vector3)Direction * Speed * Time.deltaTime;
+
+            if (Timer <= 0)
+            {
+                int random = Random.Range(0, 100);
+
+                if(random > 20)
+                {
+                    ChangeDirection(false);
+                    Timer = Random.Range(3, 7);
+                }
+                else
+                {
+                    Moving = false;
+                    Timer = Random.Range(1, 3);
+                }
+            }
+        }
+        else
+        {
+            if(Timer <= 0)
+            {
+                ChangeDirection(false);
+                Moving = true;
+                Timer = Random.Range(3, 7);
+            }
+        }
+            
+    }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  COLLISION */
@@ -93,6 +180,13 @@ public class EnemyIA : MonoBehaviour
         {
             TakeDamege.Invoke(10);
             Destroy(collision.gameObject);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            ChangeDirection(true);
         }
     }
 

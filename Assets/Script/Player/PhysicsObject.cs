@@ -74,7 +74,6 @@ public class PhysicsObject : MonoBehaviour
                 hitBufferList.Add(hitBuffer[i]);
             }
 
-            print(hitBufferList.Count);
             for (int i = 0; i < hitBufferList.Count; i++)
             {
                 Vector2 currentNormal = hitBufferList[i].normal;

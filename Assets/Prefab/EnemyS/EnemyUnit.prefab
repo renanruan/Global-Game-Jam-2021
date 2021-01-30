@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 515648590958595300}
   - component: {fileID: 6022241165721285582}
   - component: {fileID: 8856243042937641184}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemyUnit
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -58,6 +58,9 @@ MonoBehaviour:
   maxAttackDistance: 3
   minDistanceFromPlayer: 0
   targetLocker: 0
+  Direction: {x: 0, y: 0}
+  Moving: 0
+  Speed: 1
 --- !u!114 &1576231717336315575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,7 +141,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!95 &515648590958595300
 Animator:
