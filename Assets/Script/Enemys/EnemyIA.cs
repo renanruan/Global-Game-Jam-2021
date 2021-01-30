@@ -9,14 +9,16 @@ public class EnemyIA : MonoBehaviour
     [Header("Self Parts")]
     public SpriteRenderer sprite;
     public Animator animator;
-    public EnemyShooter Shooter;
     public EnemyHealth Health;
+    public EnemyShooter Shooter;
+
 
     [Header("IA")]
     public Transform target;
     public float maxLookDistance;
     public float maxAttackDistance;
     public float minDistanceFromPlayer;
+    public bool targetLocker;
 
     [Header("Actions")]
     public UnityIntAction TakeDamege = new UnityIntAction();
@@ -28,6 +30,8 @@ public class EnemyIA : MonoBehaviour
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     private void Start()
     {
+        target = PlayerState.Player.transform;
+
         /* EVENTOS DE IA */
         TakeDamege.AddListener(Health.TakeDamage);
         StartShooting += Shooter.StartShootingRoutine;
@@ -37,7 +41,7 @@ public class EnemyIA : MonoBehaviour
         Health.OnDeath += Death;
 
         /* EVENTOS DE TIRO */
-        //PlayerState. += ;
+        Shooter.target = target;
 
     }
 
@@ -55,7 +59,11 @@ public class EnemyIA : MonoBehaviour
             //Check distance and time
             if (distance <= maxAttackDistance)
             {
-                //Shoot();
+                StartShooting.Invoke();
+            }
+            else
+            {
+                StopShooting.Invoke();
             }
         }
     }
@@ -63,10 +71,12 @@ public class EnemyIA : MonoBehaviour
 
     void LookAtTarget()
     {
-        var dir = target.position - transform.position;
-        dir.y = 0;
-        var rotation = Quaternion.LookRotation(dir);
-       // transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationDamping);
+        // Torso olha para o Mouse
+        Vector2 targetPos = target.position - transform.position;
+        targetPos.Normalize();
+        float rot_z = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rot_z + 90);
+
     }
 
 

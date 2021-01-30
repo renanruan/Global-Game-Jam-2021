@@ -17,7 +17,7 @@ public class PhysicsObject : MonoBehaviour
 
 
     protected const float minMoveDistance = 0.001f;
-    protected const float shellRadius = 0.01f;
+    protected const float shellRadius = 0.1f;
 
 
     void Start()
@@ -58,34 +58,36 @@ public class PhysicsObject : MonoBehaviour
     {
         float distance = move.magnitude;
 
+
         if (distance > minMoveDistance)
         {
 
-            int count = coll2d.Cast(move, contactFilter, hitBuffer, distance + shellRadius);
-            //int count = rb2d.Cast(move, contactFilter, hitBuffer, distance + shellRadius);
+            int count = coll2d.Cast(move * Vector2.up, contactFilter, hitBuffer, shellRadius);
             hitBufferList.Clear();
             for (int i = 0; i < count; i++)
             {
                 hitBufferList.Add(hitBuffer[i]);
             }
+            count = coll2d.Cast(move * Vector2.right, contactFilter, hitBuffer, shellRadius);
+            for (int i = 0; i < count; i++)
+            {
+                hitBufferList.Add(hitBuffer[i]);
+            }
 
+            print(hitBufferList.Count);
             for (int i = 0; i < hitBufferList.Count; i++)
             {
                 Vector2 currentNormal = hitBufferList[i].normal;
 
-                float projection = Vector2.Dot(velocity, currentNormal);
+                float projection = Vector2.Dot(move, currentNormal);
                 if (projection < 0)
                 {
-                    velocity = velocity - projection * currentNormal;
+                    move = move - projection * currentNormal;
                 }
-
-                float modifiedDistance = hitBufferList[i].distance - shellRadius;
-                distance = modifiedDistance < distance ? modifiedDistance : distance;
             }
 
-
         }
-
-        transform.position = (Vector2)transform.position + move.normalized * distance;
+ 
+        transform.position = (Vector2)transform.position + move;
     }
 }

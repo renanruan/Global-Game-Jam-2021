@@ -69,6 +69,8 @@
     <Compile Include="Assets\Script\Enemys\EnemyShooter.cs" />
     <Compile Include="Assets\Script\Munition\BulletIA.cs" />
     <Compile Include="Assets\Script\Adm\GameManager.cs" />
+    <Compile Include="Assets\Script\Player\PlayerSound.cs" />
+    <Compile Include="Assets\Script\Player\PlayerAnime.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GGJ_Project\Metadata\Tags.xml" />
@@ -108,6 +110,7 @@
      <None Include="Assets\GGJ_Project\Metadata\AudioFile\{2bb0b0f5-9c17-4463-9800-33f99ba9647c}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\Event\{578224d9-5e3a-40c3-afa3-be5bffe37d43}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\ParameterPreset\{cad7fa9d-f300-4383-895b-1a82c3dc8d5a}.xml" />
+     <None Include="Assets\Material\SpriteAdditive.shader" />
      <None Include="Assets\GGJ_Project\Metadata\EncodingSetting\{159cf9e4-7736-4dd0-b561-d3f9e7c9d4d7}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\ParameterPreset\{55e282c0-5434-4310-958a-786bb003c893}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\SnapshotGroup\{20d0cd11-8ff2-4c6d-a0db-64d7a19ee65a}.xml" />

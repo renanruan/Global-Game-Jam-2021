@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - PlayerBullet
   - EnemyBullet
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -41,9 +42,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floor
+    uniqueID: 875923097
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Player
     uniqueID: 3118407975
+    locked: 0
+  - name: Top
+    uniqueID: 2849990119
     locked: 0

@@ -12,26 +12,51 @@ public class PlayerState : MonoBehaviour
     public PlayerCollision Collision;
     public PlayerHealth Health;
     public PlayerShooter Shooter;
-    public Animator animator;
+    public PlayerSound Sounds;
+    public PlayerAnime Animator;
 
     [Header("State")]
     public static Mode ActualMode = Mode.MechaZord;
+
+    [Header("Player")]
+    public static GameObject Player;
 
     [Header("Actions")]
     public UnityAction EnterMechaForm;
     public UnityAction EnterHumanForm;
 
+    private void Awake()
+    {
+        Player = gameObject;    
+    }
+
     private void Start()
     {
         /* EVENTOS DE ESTADO */
-        //PlayerState. += ;
+        this.EnterMechaForm += Animator.EnterMechaForm;
+        this.EnterMechaForm += BecameMecha;
+
+        this.EnterHumanForm += Animator.EnterHumanForm;
+        this.EnterHumanForm += BecameHuman;
 
         /* EVENTOS DE CONTROLE */
         Control.StartShooting += Shooter.StartShootingRoutine;
+        Control.StartShooting += Sounds.StartMachineGun;
+        Control.StartShooting += Animator.StartShooting;
+
         Control.StopShooting += Shooter.EndShootingRoutine;
+        Control.StopShooting += Sounds.StopMachineGun;
+        Control.StopShooting += Animator.StopShooting;
+
+        Control.StartRunning += Sounds.StartEngine;
+        Control.StartRunning += Animator.StartRunning;
+
+        Control.StopRunning += Sounds.StopEngine;
+        Control.StopRunning += Animator.StopRunning;
 
         /* EVENTOS DE COLISAO */
         Collision.TakeDamege.AddListener(Health.TakeDamage);
+
         Collision.MechaFound += ChangeState;
 
         /* EVENTOS DE VIDA */
@@ -41,8 +66,11 @@ public class PlayerState : MonoBehaviour
         /* EVENTOS DE TIRO */
         //Shooter. += ;
 
+        /* EVENTOS DE SOM */
+        //Sound. += ;
 
-        animator.SetBool("MechaForm", true);
+        /* EVENTOS DE ANIMACAO */
+        //Animator. += ;
 
     }
 
@@ -56,22 +84,26 @@ public class PlayerState : MonoBehaviour
         {
 
             ActualMode = Mode.Human;
-            animator.SetBool("HumanForm", true);
-            animator.SetBool("MechaForm", false);
-            animator.SetTrigger("ChangeForm");
             EnterHumanForm.Invoke();
         }
         else//(state == Mode.Human)
         {
 
             ActualMode = Mode.MechaZord;
-            animator.SetBool("HumanForm", false);
-            animator.SetBool("MechaForm", true);
-            animator.SetTrigger("ChangeForm");
             EnterMechaForm.Invoke();
         }
 
         
+    }
+
+    void BecameHuman()
+    {
+
+    }
+
+    void BecameMecha()
+    {
+
     }
 
     

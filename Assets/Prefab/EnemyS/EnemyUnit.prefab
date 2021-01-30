@@ -44,19 +44,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6555939353012684630}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 238c172ccaa074246bf3df6fc8f37b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: -7739082955134631247}
   animator: {fileID: 515648590958595300}
-  Shooter: {fileID: 1576231717336315575}
   Health: {fileID: 7267784377569267477}
+  Shooter: {fileID: 1576231717336315575}
   target: {fileID: 0}
-  maxLookDistance: 0
-  maxAttackDistance: 0
+  maxLookDistance: 6
+  maxAttackDistance: 3
   minDistanceFromPlayer: 0
+  targetLocker: 0
 --- !u!114 &1576231717336315575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,9 +70,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384cebcd0d39fcf448586292063784eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 0}
-  AttackSpeed: 0
+  Bullet: {fileID: 6099302649772665830, guid: 8f288d0b6d38cae4ca5ddd1aad924a1a, type: 3}
+  ShootPoint: {fileID: 0}
+  AttackSpeed: 3
   IsShooting: 0
+  target: {fileID: 0}
 --- !u!114 &7267784377569267477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,9 +190,9 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.2

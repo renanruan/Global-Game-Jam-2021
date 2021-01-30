@@ -6,17 +6,21 @@ public class EnemyShooter : MonoBehaviour
 {
     [Header("Munition")]
     public GameObject Bullet;
+    public GameObject ShootPoint;
 
     [Header("Shoot Settings")]
     public float AttackSpeed;
     private float AttackInterval = 0;
     public bool IsShooting = false;
+    public Transform target;
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  SHOOT ROUTINE */
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     public void StartShootingRoutine()
     {
+        if (IsShooting)
+            return;
         AttackInterval = 0;
         IsShooting = true;
     }
@@ -26,9 +30,9 @@ public class EnemyShooter : MonoBehaviour
     }
     private void Shoot()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 targetPosition = target.transform.position;
         BulletIA bulletIA = Instantiate(Bullet, transform.position, Quaternion.Euler(0, 0, 0)).GetComponent<BulletIA>();
-        bulletIA.ConfigureDirection((mousePos - (Vector2)transform.position).normalized);
+        bulletIA.ConfigureDirection((targetPosition - (Vector2)transform.position).normalized);
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
