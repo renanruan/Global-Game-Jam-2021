@@ -64,7 +64,7 @@ public class PlayerState : MonoBehaviour
         Health.OnShieldBreak += ChangeState;
 
         /* EVENTOS DE TIRO */
-        //Shooter. += ;
+        Shooter.Charge.AddListener(Animator.ChargeGun);
 
         /* EVENTOS DE SOM */
         //Sound. += ;
@@ -110,5 +110,9 @@ public class PlayerState : MonoBehaviour
 }
 
 public class UnityIntAction : UnityEvent<int>
+{
+}
+
+public class UnityFloatAction : UnityEvent<float>
 {
 }

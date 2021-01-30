@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAnime : MonoBehaviour
 {
+
     [Header("Self Parts")]
     public Animator animator;
 
@@ -39,5 +40,10 @@ public class PlayerAnime : MonoBehaviour
     public void StopShooting()
     {
         animator.SetBool("Attacking", false);
+    }
+
+    public void ChargeGun(float num)
+    {
+        animator.SetFloat("Charge", num * 10f);
     }
 }

@@ -62,15 +62,15 @@
     <Compile Include="Assets\Script\Player\PlayerController.cs" />
     <Compile Include="Assets\Script\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Script\Player\PlayerState.cs" />
+    <Compile Include="Assets\Script\Player\PlayerSound.cs" />
     <Compile Include="Assets\Script\Enemys\EnemyHealth.cs" />
     <Compile Include="Assets\Script\Enemys\EnemySpawn.cs" />
+    <Compile Include="Assets\Script\Player\PlayerAnime.cs" />
     <Compile Include="Assets\Script\Tasks\Task.cs" />
     <Compile Include="Assets\Script\Enemys\EnemyIA.cs" />
     <Compile Include="Assets\Script\Enemys\EnemyShooter.cs" />
     <Compile Include="Assets\Script\Munition\BulletIA.cs" />
     <Compile Include="Assets\Script\Adm\GameManager.cs" />
-    <Compile Include="Assets\Script\Player\PlayerSound.cs" />
-    <Compile Include="Assets\Script\Player\PlayerAnime.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GGJ_Project\Metadata\Tags.xml" />
