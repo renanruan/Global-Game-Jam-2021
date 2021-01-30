@@ -111,13 +111,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 873187978115869325}
-  - component: {fileID: 873187978115869320}
-  - component: {fileID: 873187978115869324}
-  - component: {fileID: 873187978115869323}
-  - component: {fileID: 873187978115869322}
-  - component: {fileID: 1970215682118276755}
-  - component: {fileID: 7180103031722430292}
-  - component: {fileID: 5116669204515556460}
+  - component: {fileID: 6375141569242576992}
+  - component: {fileID: 3349067776958500988}
+  - component: {fileID: 3950601428725772563}
+  - component: {fileID: 316527448979942025}
+  - component: {fileID: 160976783932329973}
+  - component: {fileID: 1683200394909238743}
+  - component: {fileID: 362098813410339073}
   - component: {fileID: 873187978115869327}
   - component: {fileID: 873187978115869326}
   m_Layer: 0
@@ -146,7 +146,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &873187978115869320
+--- !u!114 &6375141569242576992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,13 +158,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24e2f5e6b6956d49beadbe073890278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Control: {fileID: 873187978115869324}
-  Collision: {fileID: 873187978115869323}
-  Health: {fileID: 873187978115869322}
-  Shooter: {fileID: 1970215682118276755}
-  Sounds: {fileID: 7180103031722430292}
-  Animator: {fileID: 5116669204515556460}
---- !u!114 &873187978115869324
+  Control: {fileID: 3349067776958500988}
+  Collision: {fileID: 3950601428725772563}
+  Health: {fileID: 316527448979942025}
+  Shooter: {fileID: 160976783932329973}
+  Sounds: {fileID: 1683200394909238743}
+  Animator: {fileID: 362098813410339073}
+--- !u!114 &3349067776958500988
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,7 +183,7 @@ MonoBehaviour:
   CurrentSpeed: 5
   NormalSpeed: 5
   SlowedSpeed: 3
---- !u!114 &873187978115869323
+--- !u!114 &3950601428725772563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a488e01f52a2c468ba3c2291722b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &873187978115869322
+--- !u!114 &316527448979942025
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,7 +213,7 @@ MonoBehaviour:
   CurrentShield: 0
   HealthBar: {fileID: 0}
   ShieldBar: {fileID: 0}
---- !u!114 &1970215682118276755
+--- !u!114 &160976783932329973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,7 +231,7 @@ MonoBehaviour:
   AttackSpeed: 20
   IsShooting: 0
   AttackTimeDelay: 1
---- !u!114 &7180103031722430292
+--- !u!114 &1683200394909238743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,7 +250,7 @@ MonoBehaviour:
   LoseHead: {fileID: 3754718632714430681}
   LevelMusic: {fileID: 5623249483379345065}
   TakeDamage: {fileID: 5165280709709104490}
---- !u!114 &5116669204515556460
+--- !u!114 &362098813410339073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -550,7 +550,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 1.4, y: 1.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

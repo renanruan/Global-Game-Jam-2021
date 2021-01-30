@@ -1,4 +1,5 @@
 Library/
+[Ll]ibrary/
 
 ### FMOD Unity Integration ###
 # Never ignore DLLs in the FMOD subfolder, so make sure that the FMOD-folder is in the correct path.

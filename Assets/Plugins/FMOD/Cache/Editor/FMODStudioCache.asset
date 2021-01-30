@@ -123,7 +123,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 763269884731010013}
+  - {fileID: -3632947604633877454}
   MinDistance: 0
   MaxDistance: 0
   Length: 5333
@@ -142,7 +142,7 @@ MonoBehaviour:
   Path: Assets/GGJ_Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637476216779113168
+  lastModified: 637476338731249760
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -206,7 +206,7 @@ MonoBehaviour:
   Path: Assets/GGJ_Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637476216779103196
+  lastModified: 637476338731239770
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -233,6 +233,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 666
+--- !u!114 &-3632947604633877454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_Engine/Moving
+  m_EditorClassIdentifier: 
+  Name: Moving
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-3262405615597362758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +273,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -7388915983959822812}
+  - {fileID: 1955893795309361249}
   MinDistance: 0
   MaxDistance: 0
   Length: 3889
@@ -277,10 +297,30 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 25856952565270659}
+  - {fileID: -2517199465495905812}
   MinDistance: 0
   MaxDistance: 0
   Length: 169411
+--- !u!114 &-2517199465495905812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus_Stage_01/head
+  m_EditorClassIdentifier: 
+  Name: head
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-725015534288130537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +440,7 @@ MonoBehaviour:
   - {fileID: -6033124470288966965}
   StringsBanks:
   - {fileID: -6709824168589382076}
-  stringsBankWriteTime: 637476216779113168
+  stringsBankWriteTime: 637476338731249760
   cacheVersion: 6
 --- !u!114 &25856952565270659
 MonoBehaviour:
@@ -488,6 +528,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 838
+--- !u!114 &1955893795309361249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_machinegun_rotation/Shooting
+  m_EditorClassIdentifier: 
+  Name: Shooting
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &3860894559414267675
 MonoBehaviour:
   m_ObjectHideFlags: 0
