@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class BulletIA : MonoBehaviour
 {
+    public enum Size { Small, Medium, Big};
+
     [Header("Settings")]
     public float Velocity;
     public float TimeSpawn;
     public Vector3 Direction = Vector3.zero;
     public float RNGAngle;
+    public Size Tamanho;
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  INITIAL CONFIGURATION */
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    private void Start()
+    {
+        GetComponent<Animator>().SetInteger("Size", (int)Tamanho - 1);
+        GetComponent<Animator>().SetFloat("Random", Random.Range(0, 1));
+    }
+
     public void ConfigureDirection(Vector3 Direction)
     {
         RNGAngle = Random.Range(-RNGAngle, RNGAngle);

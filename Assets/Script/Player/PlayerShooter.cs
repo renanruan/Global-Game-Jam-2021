@@ -13,7 +13,12 @@ public class PlayerShooter : MonoBehaviour
     public float AttackSpeed;
     private float AttackInterval = 0;
     public bool IsShooting = false;
-    
+    private float AttackDelay = 0;
+    public float AttackTimeDelay;
+
+    [Header("Actions")]
+    public UnityFloatAction Charge = new UnityFloatAction();
+
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  SHOOT ROUTINE */
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -50,12 +55,34 @@ public class PlayerShooter : MonoBehaviour
     {
         if (IsShooting)
         {
-            AttackInterval -= Time.deltaTime;
-            if(AttackInterval <= 0)
+            AttackDelay += Time.deltaTime;
+
+            if (AttackDelay >= AttackTimeDelay)
             {
-                AttackInterval = 1 / AttackSpeed;
-                Shoot();
+                AttackDelay = AttackTimeDelay;
+
+                
+
+                AttackInterval -= Time.deltaTime;
+                if (AttackInterval <= 0)
+                {
+                    AttackInterval = 1 / AttackSpeed;
+                    Shoot();
+                }
             }
+
+            Charge.Invoke(AttackDelay);
+        }
+        else
+        {
+            AttackDelay -= Time.deltaTime;
+
+            if(AttackDelay <= 0)
+            {
+                AttackDelay = 0;
+            }
+
+            Charge.Invoke(AttackDelay);
         }
     }
 }
