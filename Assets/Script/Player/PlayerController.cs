@@ -51,7 +51,7 @@ public class PlayerController : PhysicsObject
             animator.SetBool("Running", false);
         }
 
-        Engine.SetParameter("Moving", (int)move.magnitude);
+        Engine.SetParameter("Moving", move.magnitude);
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
