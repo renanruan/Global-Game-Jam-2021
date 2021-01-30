@@ -179,7 +179,7 @@ public class EnemyIA : MonoBehaviour
         if(collision.gameObject.tag == "PlayerBullet")
         {
             TakeDamege.Invoke(10);
-            collision.GetComponent<BulletIA>().HitDamage();
+            Destroy(collision.gameObject);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
