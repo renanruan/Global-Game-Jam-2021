@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{8e9ab934-be36-4158-8c98-37160c100c66}">
 		<property name="name">
 			<value>sfx_step</value>
@@ -106,9 +106,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{194aa455-8f7d-4a82-94c4-41396c5cb843}">
-		<property name="volume">
-			<value>-14.5</value>
-		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -125,7 +122,6 @@
 	<object class="MixerBusEffectChain" id="{6062574c-146e-46c0-8017-721e9d8e6367}">
 		<relationship name="effects">
 			<destination>{7bd0ac59-0123-4e23-b5d9-4e8dbacea68d}</destination>
-			<destination>{3c2eb06a-8248-4b76-9f16-da580800c3f7}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1850db8a-3651-49bc-8cb2-ef72d52426a6}" />
@@ -161,14 +157,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{5dae502d-e613-45c7-bc10-2316b5272259}" />
 	<object class="MixerBusFader" id="{7bd0ac59-0123-4e23-b5d9-4e8dbacea68d}" />
-	<object class="ThreeEQEffect" id="{3c2eb06a-8248-4b76-9f16-da580800c3f7}">
-		<property name="lowGain">
-			<value>5.5</value>
-		</property>
-		<property name="highGain">
-			<value>-19</value>
-		</property>
-	</object>
 	<object class="AutomationPoint" id="{582bf6cc-9610-42cf-8d82-2838ff40631f}">
 		<property name="position">
 			<value>0</value>

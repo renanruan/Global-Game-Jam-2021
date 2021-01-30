@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{488af9fb-ed40-47f0-9bf9-9992ba9c0bd5}">
 		<property name="name">
 			<value>sfx_machinegun_shots</value>
@@ -42,9 +42,6 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{624e3e17-f6d2-4bb4-b163-fb24116d20bc}">
-		<property name="uiTrackHeight">
-			<value>28</value>
-		</property>
 		<relationship name="mixerGroup">
 			<destination>{c61f0b58-b07d-47b5-b320-f60567d93d6f}</destination>
 		</relationship>
@@ -61,15 +58,8 @@
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{bae526de-37d0-40cd-ba4f-2aa67bac8d12}" />
-	<object class="MarkerTrack" id="{f8b0b851-c527-43fb-8772-b00a5afad095}">
-		<property name="uiTrackHeight">
-			<value>100</value>
-		</property>
-	</object>
+	<object class="MarkerTrack" id="{f8b0b851-c527-43fb-8772-b00a5afad095}" />
 	<object class="GroupTrack" id="{dc55884b-889c-43bf-aa31-845a89048989}">
-		<property name="uiTrackHeight">
-			<value>100</value>
-		</property>
 		<relationship name="modules">
 			<destination>{e9c874b8-f1d3-4fd8-b962-d2523e0fd041}</destination>
 			<destination>{7289cda8-c315-4104-900a-25c03fdf385c}</destination>
@@ -79,17 +69,14 @@
 		</relationship>
 	</object>
 	<object class="GroupTrack" id="{47192254-7ef3-4de8-9ec2-532e93eee238}">
-		<property name="uiTrackHeight">
-			<value>100</value>
-		</property>
 		<relationship name="mixerGroup">
 			<destination>{b37df07f-da1c-4051-a3a8-f63051cb7abb}</destination>
 		</relationship>
 	</object>
 	<object class="Timeline" id="{a6b76240-8298-4f58-bdaf-70f626d47920}">
 		<relationship name="modules">
-			<destination>{e9c874b8-f1d3-4fd8-b962-d2523e0fd041}</destination>
 			<destination>{7289cda8-c315-4104-900a-25c03fdf385c}</destination>
+			<destination>{e9c874b8-f1d3-4fd8-b962-d2523e0fd041}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{c61f0b58-b07d-47b5-b320-f60567d93d6f}">

@@ -34,9 +34,11 @@ public class PlayerState : MonoBehaviour
     {
         /* EVENTOS DE ESTADO */
         this.EnterMechaForm += Animator.EnterMechaForm;
+        this.EnterMechaForm += Sounds.RetreveHead;
         this.EnterMechaForm += BecameMecha;
 
         this.EnterHumanForm += Animator.EnterHumanForm;
+        this.EnterHumanForm += Sounds.LosesHead;
         this.EnterHumanForm += BecameHuman;
 
         /* EVENTOS DE CONTROLE */
@@ -56,7 +58,7 @@ public class PlayerState : MonoBehaviour
 
         /* EVENTOS DE COLISAO */
         Collision.TakeDamege.AddListener(Health.TakeDamage);
-
+        Collision.TakeDamege.AddListener(Sounds.TakesDamage);
         Collision.MechaFound += ChangeState;
 
         /* EVENTOS DE VIDA */
@@ -65,6 +67,7 @@ public class PlayerState : MonoBehaviour
 
         /* EVENTOS DE TIRO */
         Shooter.Charge.AddListener(Animator.ChargeGun);
+        Shooter.OneShot += Sounds.Shoot;
 
         /* EVENTOS DE SOM */
         //Sound. += ;
@@ -98,12 +101,13 @@ public class PlayerState : MonoBehaviour
 
     void BecameHuman()
     {
-
+        Control.StopShooting();
+        SpotScript.ActiveSpot();
     }
 
     void BecameMecha()
     {
-
+        SpotScript.Desactive();
     }
 
     

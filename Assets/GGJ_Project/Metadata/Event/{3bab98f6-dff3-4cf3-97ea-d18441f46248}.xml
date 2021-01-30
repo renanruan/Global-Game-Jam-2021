@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{3bab98f6-dff3-4cf3-97ea-d18441f46248}">
 		<property name="name">
 			<value>sfx_lose_head</value>
@@ -41,9 +41,6 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{5f9c755e-3b5c-41ed-88e4-b3ca2a6a6639}">
-		<property name="uiTrackHeight">
-			<value>28</value>
-		</property>
 		<relationship name="mixerGroup">
 			<destination>{0d7f2f48-19ea-487f-973f-af17c1876458}</destination>
 		</relationship>
@@ -60,15 +57,8 @@
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{70ad0ab2-5ccc-48e5-8306-9fb4e6dd3940}" />
-	<object class="MarkerTrack" id="{5bc37282-70d8-4178-91e7-1ea87a4d7b79}">
-		<property name="uiTrackHeight">
-			<value>100</value>
-		</property>
-	</object>
+	<object class="MarkerTrack" id="{5bc37282-70d8-4178-91e7-1ea87a4d7b79}" />
 	<object class="GroupTrack" id="{30795e05-b95a-440b-aab3-5dea144f7f5c}">
-		<property name="uiTrackHeight">
-			<value>100</value>
-		</property>
 		<relationship name="modules">
 			<destination>{55245977-97c4-4803-bab9-881254190678}</destination>
 		</relationship>
