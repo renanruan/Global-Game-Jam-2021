@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{24cc7003-e502-4ec3-a30e-511d388cbccd}">
+		<property name="assetPath">
+			<value>25_enemy_scream_02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.66666666666666663</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9d1573ab-6b6e-4515-a44f-fe4d7b4bed51}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -12,8 +12,6 @@ public class BulletIA : MonoBehaviour
     public Vector3 Direction = Vector3.zero;
     public float RNGAngle;
     public Size Tamanho;
-    public FMODUnity.StudioEventEmitter HitSound;
-    public SpriteRenderer HitSprite;
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  INITIAL CONFIGURATION */
@@ -47,21 +45,11 @@ public class BulletIA : MonoBehaviour
         }
     }
 
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    /*  COLLISION  */
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Wall")
         {
             Destroy(gameObject);
         }
-    }
-
-    public void HitDamage()
-    {
-        HitSound.Play();
-        HitSprite.enabled = false;
-        TimeSpawn = 0.2f;
     }
 }

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class PlayerShooter : MonoBehaviour
 {
@@ -19,7 +18,6 @@ public class PlayerShooter : MonoBehaviour
 
     [Header("Actions")]
     public UnityFloatAction Charge = new UnityFloatAction();
-    public UnityAction OneShot;
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  SHOOT ROUTINE */
@@ -35,7 +33,7 @@ public class PlayerShooter : MonoBehaviour
     }
     private void Shoot()
     {
-        OneShot.Invoke();
+
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         BulletIA bulletIA;
         if (Shoot1)

@@ -17,10 +17,9 @@ public class PlayerCollision : MonoBehaviour
         if(collision.gameObject.tag == "EnemyBullet")
         {
             TakeDamege.Invoke(10);
-            collision.GetComponent<BulletIA>().HitDamage();
         }
-        else
-        if (collision.gameObject.tag == "Head")
+
+        if (collision.gameObject.tag == "Mecha")
         {
             MechaFound.Invoke();
         }
