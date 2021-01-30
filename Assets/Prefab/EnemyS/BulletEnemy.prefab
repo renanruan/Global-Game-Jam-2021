@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: -4250575758912364608}
   - component: {fileID: -1635272853425882091}
   - component: {fileID: 5726567768773045515}
+  - component: {fileID: 80582303148986798}
+  - component: {fileID: 5562740481324249207}
   m_Layer: 0
   m_Name: BulletEnemy
   m_TagString: EnemyBullet
@@ -138,3 +140,48 @@ MonoBehaviour:
   TimeSpawn: 3
   Direction: {x: 0, y: 0, z: 0}
   RNGAngle: 0
+  Tamanho: 0
+  HitSound: {fileID: 5562740481324249207}
+  HitSprite: {fileID: -6960703095843034176}
+--- !u!95 &80582303148986798
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099302649772665830}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db3b9ee5381a3454a9205ee7b471ffa4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5562740481324249207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099302649772665830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/sfx_player_damage
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0

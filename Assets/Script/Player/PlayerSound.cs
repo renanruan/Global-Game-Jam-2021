@@ -8,6 +8,10 @@ public class PlayerSound : MonoBehaviour
     public FMODUnity.StudioEventEmitter Step;
     public FMODUnity.StudioEventEmitter Engine;
     public FMODUnity.StudioEventEmitter Shooting;
+    public FMODUnity.StudioEventEmitter GunRot;
+    public FMODUnity.StudioEventEmitter LoseHead;
+    public FMODUnity.StudioEventEmitter LevelMusic;
+    public FMODUnity.StudioEventEmitter TakeDamage;
 
     public void SoundStepOn()
     {
@@ -31,11 +35,33 @@ public class PlayerSound : MonoBehaviour
 
     public void StartMachineGun()
     {
-        Shooting.SetParameter("Shooting", 0);
+        GunRot.Play();
+        GunRot.SetParameter("Shooting", 0);
     }
 
     public void StopMachineGun()
     {
-        Shooting.SetParameter("Shooting", 1);
+        GunRot.SetParameter("Shooting", 1);
+    }
+
+    public void Shoot()
+    {
+        Shooting.Play();
+    }
+
+    public void LosesHead()
+    {
+        LoseHead.Play();
+        LevelMusic.SetParameter("head", 0);
+    }
+
+    public void RetreveHead()
+    {
+        LevelMusic.SetParameter("head", 1);
+    }
+
+    public void TakesDamage(int i)
+    {
+        TakeDamage.Play();
     }
 }
