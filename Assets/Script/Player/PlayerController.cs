@@ -6,12 +6,7 @@ using UnityEngine.Events;
 public class PlayerController : PhysicsObject
 {
     [Header("Self Parts")]
-    public Animator animator;
     public GameObject Torso, Pernas;
-
-    [Header("Sounds")]
-    public FMODUnity.StudioEventEmitter Engine;
-    public FMODUnity.StudioEventEmitter Shooting;
 
     [Header("Limits of Moviment")]
     public float CurrentSpeed = 5;
@@ -21,6 +16,8 @@ public class PlayerController : PhysicsObject
     [Header("Actions")]
     public UnityAction StartShooting;
     public UnityAction StopShooting;
+    public UnityAction StartRunning;
+    public UnityAction StopRunning;
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  START SETTINGS */
@@ -44,14 +41,13 @@ public class PlayerController : PhysicsObject
 
         if(targetVelocity.magnitude != 0f)
         {
-            animator.SetBool("Running", true);
+            StartRunning.Invoke();
         }
         else
         {
-            animator.SetBool("Running", false);
+            StopRunning.Invoke();
         }
-
-        Engine.SetParameter("Moving", (int)move.magnitude);
+        
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -62,14 +58,10 @@ public class PlayerController : PhysicsObject
         if (Input.GetMouseButtonDown(0))
         {
             StartShooting.Invoke();
-            animator.SetBool("Attacking", true);
-            Shooting.SetParameter("Shooting", 1);
         }
         else if (Input.GetMouseButtonUp(0))
         {
             StopShooting.Invoke();
-            animator.SetBool("Attacking", false);
-            Shooting.SetParameter("Shooting", 0);
         }
 
 

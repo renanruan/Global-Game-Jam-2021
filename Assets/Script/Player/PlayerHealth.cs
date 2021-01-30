@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("HitPoints")]
     public int MaxHealth, MaxShield;
-    private int CurrentHealth, CurrentShield;
+    public int CurrentHealth, CurrentShield;
 
     [Header("Health Control")]
     public Image HealthBar;
@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         CurrentHealth = MaxHealth;
-        CurrentHealth = MaxShield;
+        CurrentShield = MaxShield;
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */

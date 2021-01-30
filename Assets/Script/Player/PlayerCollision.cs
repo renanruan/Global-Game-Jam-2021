@@ -14,7 +14,7 @@ public class PlayerCollision : MonoBehaviour
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Hazard")
+        if(collision.gameObject.tag == "EnemyBullet")
         {
             TakeDamege.Invoke(10);
         }
@@ -23,6 +23,7 @@ public class PlayerCollision : MonoBehaviour
         {
             MechaFound.Invoke();
         }
+
     }
 
 }
