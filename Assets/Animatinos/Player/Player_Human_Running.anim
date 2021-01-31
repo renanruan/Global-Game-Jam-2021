@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_ChangeToMecha
+  m_Name: Player_Human_Running
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 2791920214281933077, guid: a27659851f11c534688f45aa1e52b40d,
+      value: {fileID: 6551998406238584464, guid: 5e4746e20f863204bb7953828ca60e3f,
         type: 3}
     attribute: m_Sprite
     path: Sprite_Torso
@@ -41,7 +41,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 2791920214281933077, guid: a27659851f11c534688f45aa1e52b40d, type: 3}
+    - {fileID: 6551998406238584464, guid: 5e4746e20f863204bb7953828ca60e3f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
