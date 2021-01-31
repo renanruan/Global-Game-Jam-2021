@@ -35,10 +35,12 @@ public class PlayerState : MonoBehaviour
         /* EVENTOS DE ESTADO */
         this.EnterMechaForm += Animator.EnterMechaForm;
         this.EnterMechaForm += Sounds.RetreveHead;
+        this.EnterMechaForm += Health.RestoreShield;
         this.EnterMechaForm += BecameMecha;
 
         this.EnterHumanForm += Animator.EnterHumanForm;
         this.EnterHumanForm += Sounds.LosesHead;
+        this.EnterHumanForm += Health.RestoreHealth;
         this.EnterHumanForm += BecameHuman;
 
         /* EVENTOS DE CONTROLE */

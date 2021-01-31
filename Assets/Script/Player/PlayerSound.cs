@@ -10,6 +10,7 @@ public class PlayerSound : MonoBehaviour
     public FMODUnity.StudioEventEmitter Shooting;
     public FMODUnity.StudioEventEmitter GunRot;
     public FMODUnity.StudioEventEmitter LoseHead;
+    public FMODUnity.StudioEventEmitter RetrieveHead;
     public FMODUnity.StudioEventEmitter LevelMusic;
     public FMODUnity.StudioEventEmitter TakeDamage;
 
@@ -36,12 +37,12 @@ public class PlayerSound : MonoBehaviour
     public void StartMachineGun()
     {
         GunRot.Play();
-        GunRot.SetParameter("Shooting", 0);
+        GunRot.SetParameter("Shooting", 1);
     }
 
     public void StopMachineGun()
     {
-        GunRot.SetParameter("Shooting", 1);
+        GunRot.SetParameter("Shooting", 0);
     }
 
     public void Shoot()
@@ -58,6 +59,7 @@ public class PlayerSound : MonoBehaviour
     public void RetreveHead()
     {
         LevelMusic.SetParameter("head", 1);
+        RetrieveHead.Play();
     }
 
     public void TakesDamage(int i)

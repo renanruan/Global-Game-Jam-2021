@@ -54,5 +54,15 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void RestoreShield()
+    {
+        CurrentShield = MaxShield;
+    }
+
+    public void RestoreHealth()
+    {
+        CurrentHealth = MaxHealth;
+    }
+
 
 }
