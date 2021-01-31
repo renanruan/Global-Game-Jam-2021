@@ -52,7 +52,6 @@ public class Wave : MonoBehaviour
                 choode = (choode + 1) % 3;
             }
 
-        print(i);
             return i;
         }
     }

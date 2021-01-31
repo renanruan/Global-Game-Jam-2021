@@ -9,6 +9,8 @@ public class PlayerShooter : MonoBehaviour
     public GameObject Bullet;
     public GameObject ShootPoint1, ShootPoint2;
     private bool Shoot1 = true;
+    public float MaxMunition, CurrentMunition;
+    public bool Reloading = false;
 
     [Header("Shoot Settings")]
     public float AttackSpeed;
@@ -20,6 +22,8 @@ public class PlayerShooter : MonoBehaviour
     [Header("Actions")]
     public UnityFloatAction Charge = new UnityFloatAction();
     public UnityAction OneShot;
+    public UnityAction ReloadOn;
+    public UnityAction ReloadOff;
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  SHOOT ROUTINE */
@@ -55,25 +59,54 @@ public class PlayerShooter : MonoBehaviour
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     void Update()
     {
-        if (IsShooting)
+        
+
+        if (Reloading)
         {
-            AttackDelay += Time.deltaTime;
-
-            if (AttackDelay >= AttackTimeDelay)
+            CurrentMunition += Time.deltaTime * 3;
+            if (CurrentMunition >= MaxMunition)
             {
-                AttackDelay = AttackTimeDelay;
+                CurrentMunition = MaxMunition;
+                Reloading = false;
+                ReloadOff.Invoke();
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reloading = true;
+            ReloadOn.Invoke();
+        }
 
-                
+        if (IsShooting && !Reloading)
+        {
 
-                AttackInterval -= Time.deltaTime;
-                if (AttackInterval <= 0)
-                {
-                    AttackInterval = 1 / AttackSpeed;
-                    Shoot();
-                }
+            CurrentMunition -= Time.deltaTime;
+
+            if(CurrentMunition <= 0)
+            {
+                CurrentMunition = 0;
+                Reloading = true;
+                ReloadOn.Invoke();
             }
 
-            Charge.Invoke(AttackDelay);
+                AttackDelay += Time.deltaTime;
+
+                if (AttackDelay >= AttackTimeDelay)
+                {
+                    AttackDelay = AttackTimeDelay;
+
+
+
+                    AttackInterval -= Time.deltaTime;
+                    if (AttackInterval <= 0)
+                    {
+                        AttackInterval = 1 / AttackSpeed;
+                        Shoot();
+                    }
+                }
+
+                Charge.Invoke(AttackDelay);
+            
         }
         else
         {
@@ -86,5 +119,12 @@ public class PlayerShooter : MonoBehaviour
 
             Charge.Invoke(AttackDelay);
         }
+
+        UI_AMMO.Instance.SetAmmo((int)(100 * (float)(CurrentMunition / MaxMunition)));
+    }
+
+    private void Start()
+    {
+        CurrentMunition = MaxMunition;
     }
 }

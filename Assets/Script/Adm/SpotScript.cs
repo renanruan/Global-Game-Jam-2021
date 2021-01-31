@@ -32,10 +32,27 @@ public class SpotScript : MonoBehaviour
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  START  */
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    public float BipDelay;
+    private float timer;
+    public FMODUnity.StudioEventEmitter Bip;
+    public AudioSource Bip3D;
+
     private void Start()
     {
         SpotList.Add(this);
         gameObject.SetActive(false);
+        timer = 0;
+    }
+
+    private void Update()
+    {
+        timer -= Time.deltaTime;
+        if(timer <= 0)
+        {
+            timer = BipDelay;
+            //Bip.Play();
+            Bip3D.Play();
+        }
     }
 
     public void Active()

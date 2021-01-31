@@ -12,6 +12,7 @@ public class EnemyIA : MonoBehaviour
     public Animator animator;
     public EnemyHealth Health;
     public EnemyShooter Shooter;
+    public Collider2D Collider;
 
 
     [Header("IA")]
@@ -62,7 +63,10 @@ public class EnemyIA : MonoBehaviour
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     void Update()
     {
-        DetectPlayer();
+        if (GameManager.GM.Playing)
+            DetectPlayer();
+        else
+            Move();
     }
 
     void DetectPlayer()
@@ -79,7 +83,6 @@ public class EnemyIA : MonoBehaviour
                 if (hit.collider.gameObject.tag == "Player")
                 {
                     LookAtTarget();
-                    animator.SetFloat("Speed", 0);
 
                     // Atira no player
                     if (distance <= maxAttackDistance)
@@ -95,8 +98,13 @@ public class EnemyIA : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            StopShooting.Invoke();
+            Move();
+        }
 
-        Move();
+       
         return;
     }
 
@@ -104,9 +112,16 @@ public class EnemyIA : MonoBehaviour
     {
         // Torso olha para o Mouse
         Vector2 targetPos = target.position - transform.position;
+        if (targetPos.magnitude >= minDistanceFromPlayer)
+        {
+            transform.position += (Vector3)targetPos.normalized * Speed * Time.deltaTime;
+        }
+
         targetPos.Normalize();
         float rot_z = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rot_z + 90);
+
+        
 
     }
 
@@ -234,6 +249,8 @@ public class EnemyIA : MonoBehaviour
         EnemysAlive--;
         this.enabled = false;
         Shooter.enabled = false;
+        Collider.isTrigger = true;
+        Collider.enabled = false;
     }
 
     public void Die()

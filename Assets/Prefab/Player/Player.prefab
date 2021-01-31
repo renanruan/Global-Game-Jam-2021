@@ -263,6 +263,7 @@ MonoBehaviour:
   coll2d: {fileID: 873187976779687777}
   Torso: {fileID: 873187976779687776}
   Pernas: {fileID: 2552034482949973892}
+  coll: {fileID: 0}
   CurrentSpeed: 5
   NormalSpeed: 5
   SlowedSpeed: 3
@@ -311,6 +312,9 @@ MonoBehaviour:
   Bullet: {fileID: 2691056353230722536, guid: cb36ec0ea19c993479918841e9518df7, type: 3}
   ShootPoint1: {fileID: 2004273210189036345}
   ShootPoint2: {fileID: 1581892241562100230}
+  MaxMunition: 10
+  CurrentMunition: 0
+  Reloading: 0
   AttackSpeed: 20
   IsShooting: 0
   AttackTimeDelay: 1
@@ -334,6 +338,7 @@ MonoBehaviour:
   RetrieveHead: {fileID: 1246666601665829927}
   LevelMusic: {fileID: 5623249483379345065}
   TakeDamage: {fileID: 5165280709709104490}
+  Reloading: {fileID: 2302921691401191498}
 --- !u!114 &362098813410339073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1023,6 +1028,60 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!1 &6124008295910779179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8009068588057574111}
+  - component: {fileID: 2302921691401191498}
+  m_Layer: 0
+  m_Name: SoundReload
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8009068588057574111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6124008295910779179}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8275159171583461479}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2302921691401191498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6124008295910779179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/sfx_reload
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &6488322120781263621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,6 +1200,7 @@ Transform:
   - {fileID: 5164005817276903623}
   - {fileID: 5411377060203350885}
   - {fileID: 8935004287001668426}
+  - {fileID: 8009068588057574111}
   m_Father: {fileID: 873187978115869325}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1154,7 +1214,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7882722636976517596}
   - component: {fileID: 8817242651905962290}
-  - component: {fileID: 2347779642144590970}
+  - component: {fileID: 4735169354765880193}
+  - component: {fileID: 7677183886932993986}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1188,7 +1249,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1221,7 +1282,7 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &2347779642144590970
+--- !u!114 &4735169354765880193
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1235,6 +1296,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 0}
   ListenerNumber: -1
+--- !u!81 &7677183886932993986
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7460864798323197960}
+  m_Enabled: 1
 --- !u!1 &7469215864582268840
 GameObject:
   m_ObjectHideFlags: 0

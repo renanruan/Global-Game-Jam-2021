@@ -20,7 +20,7 @@ public class TaskManager : MonoBehaviour
 
     public void SpawnTask()
     {
-        if (totalTasks < 1 + (int)(EnemySpawn.ESpawn.CurrentWave / 5))
+        if (totalTasks < 1 + (int)(EnemySpawn.ESpawn.CurrentWave ))
         {
             int i = Random.Range(0, Tasks.Count());
             int j = 0;
@@ -36,7 +36,7 @@ public class TaskManager : MonoBehaviour
                     return;
                 }
             } while (task.IsAvailable);
-            task.TaksConclusionTime = 60 - (int)(EnemySpawn.ESpawn.CurrentWave / 3);
+            task.TaksConclusionTime = 60 - (int)(EnemySpawn.ESpawn.CurrentWave * 2);
             task.Activate();
         }
     }
@@ -53,7 +53,7 @@ public class TaskManager : MonoBehaviour
         if(timer <= 0)
         {
             SpawnTask();
-            timer = Random.Range(15, 45 - (int)(EnemySpawn.ESpawn.CurrentWave / 5));
+            timer = Random.Range(15, 45 - (int)(EnemySpawn.ESpawn.CurrentWave));
         }
     }
 

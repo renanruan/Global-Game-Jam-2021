@@ -7,6 +7,7 @@ public class PlayerController : PhysicsObject
 {
     [Header("Self Parts")]
     public GameObject Torso, Pernas;
+    public Collider2D coll;
 
     [Header("Limits of Moviment")]
     public float CurrentSpeed = 5;
@@ -65,6 +66,7 @@ public class PlayerController : PhysicsObject
             {
                 StopShooting.Invoke();
             }
+
         }
 
 
@@ -81,6 +83,12 @@ public class PlayerController : PhysicsObject
         rot_z = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
         Pernas.transform.rotation = Quaternion.Euler(0f, 0f, rot_z + 90);
 
+    }
+
+    public void DesactiveCollider()
+    {
+        coll = Torso.GetComponent<Collider2D>();
+        coll.enabled = false;
     }
 
 }
