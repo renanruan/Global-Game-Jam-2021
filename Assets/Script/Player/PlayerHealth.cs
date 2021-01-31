@@ -40,7 +40,11 @@ public class PlayerHealth : MonoBehaviour
             {
                 CurrentShield = 0;
                 OnShieldBreak.Invoke();
+                RestoreHealth();
+                return;
             }
+
+            UI_HP.Instance.SetHealth(CurrentShield);
         }
         else//(Mode.Human)
         {
@@ -49,19 +53,28 @@ public class PlayerHealth : MonoBehaviour
             if (CurrentHealth <= 0)
             {
                 CurrentHealth = 0;
+                GameManager.GM.Loose();
                 OnDeath.Invoke();
             }
+
+            UI_HP.Instance.SetHealth(CurrentHealth);
         }
+
+        
     }
 
     public void RestoreShield()
     {
         CurrentShield = MaxShield;
+
+        UI_HP.Instance.SetHealth(CurrentShield);
     }
 
     public void RestoreHealth()
     {
         CurrentHealth = MaxHealth;
+
+        UI_HP.Instance.SetHealth(CurrentHealth);
     }
 
 

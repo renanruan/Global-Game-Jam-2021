@@ -35,6 +35,41 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
+  <PropertyGroup>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.5</UnityProjectGeneratorVersion>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>2020.2.2f1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Script\Enemys\EnemySpawnPoint.cs" />
+    <Compile Include="Assets\Script\Player\PlayerCollision.cs" />
+    <Compile Include="Assets\Script\Player\PhysicsObject.cs" />
+    <Compile Include="Assets\Script\Player\PlayerShooter.cs" />
+    <Compile Include="Assets\Script\Player\PlayerController.cs" />
+    <Compile Include="Assets\Script\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Script\Player\PlayerState.cs" />
+    <Compile Include="Assets\Script\Enemys\Wave.cs" />
+    <Compile Include="Assets\Script\Player\PlayerSound.cs" />
+    <Compile Include="Assets\Script\Enemys\EnemyHealth.cs" />
+    <Compile Include="Assets\Script\Enemys\EnemySpawn.cs" />
+    <Compile Include="Assets\Script\Player\PlayerAnime.cs" />
+    <Compile Include="Assets\Script\Tasks\Task.cs" />
+    <Compile Include="Assets\Script\Enemys\EnemyIA.cs" />
+    <Compile Include="Assets\Script\Enemys\EnemyShooter.cs" />
+    <Compile Include="Assets\Script\Adm\SpotScript.cs" />
+    <Compile Include="Assets\Script\Munition\BulletIA.cs" />
+    <Compile Include="Assets\Script\Adm\GameManager.cs" />
+    <Compile Include="Assets\Script\Adm\SceneIntro.cs" />
+    <Compile Include="Assets\Script\Tasks\TaskManager.cs" />
+    <Compile Include="Assets\Script\UI\UI_HP.cs" />
+    <Compile Include="Assets\Script\UI\UI_AMMO.cs" />
+  </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\Enemys\EnemySpawnPoint.cs" />
      <Compile Include="Assets\Script\Player\PlayerCollision.cs" />
@@ -55,6 +90,7 @@
      <Compile Include="Assets\Script\Munition\BulletIA.cs" />
      <Compile Include="Assets\Script\Adm\GameManager.cs" />
      <None Include="Assets\GGJ_Project\Metadata\Tags.xml" />
+     <None Include="Assets\GGJ_Project\Metadata\AudioFile\{884fe2d2-5a10-460c-896c-31f3d9d1a551}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\EventFolder\{e2cd88a6-262f-4967-865b-25c8e3680efb}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\AudioFile\{6b221c6d-7807-4b11-b34e-12c4d2f270c7}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\Event\{55f93c2e-a0fd-4384-a8de-d3147ae55077}.xml" />
@@ -73,12 +109,14 @@
      <None Include="Assets\GGJ_Project\Metadata\AudioFile\{23da42bf-a026-40d7-bf3b-c13f324faa42}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\Event\{488af9fb-ed40-47f0-9bf9-9992ba9c0bd5}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\Group\{3eeecec0-7e13-4776-80a9-724fec8cc7da}.xml" />
+     <None Include="Assets\GGJ_Project\Metadata\Event\{55f93c2e-a0fd-4384-a8de-d3147ae55077}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\Event\{8e9ab934-be36-4158-8c98-37160c100c66}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\Event\{0d15a835-3f7c-4ee5-85bb-e2182dc00d0c}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\EventFolder\{fa0a91ff-09e0-497f-ba44-0fce9ba7511b}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\VCA\{84cc9152-cce1-437a-815c-215edd283a0a}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\AudioFile\{6d854f8c-7110-43dc-910f-8816fc870a31}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\Workspace.xml" />
+     <None Include="Assets\GGJ_Project\Metadata\Event\{0d15a835-3f7c-4ee5-85bb-e2182dc00d0c}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\Event\{88fc2855-c8a7-4194-9a19-f1a71e12bb5e}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\AudioFile\{02fc0148-10da-44aa-a409-876a5f0512d1}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\ParameterPreset\{3a4fe934-765c-417f-bf5d-3b49df43d1d0}.xml" />
@@ -110,6 +148,7 @@
      <None Include="Assets\GGJ_Project\Metadata\AudioFile\{313b439b-c32d-4ea4-92de-36b8764df57a}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\BankFolder\{37e16803-eca0-4b46-bc79-e33828bfd2e2}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\Platform\{82072600-7ef3-49a1-a994-6ba5a4d307ba}.xml" />
+     <None Include="Assets\GGJ_Project\Metadata\AudioFile\{6b221c6d-7807-4b11-b34e-12c4d2f270c7}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\AudioFile\{2bb0b0f5-9c17-4463-9800-33f99ba9647c}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\Event\{578224d9-5e3a-40c3-afa3-be5bffe37d43}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\ParameterPreset\{cad7fa9d-f300-4383-895b-1a82c3dc8d5a}.xml" />
@@ -121,7 +160,9 @@
      <None Include="Assets\GGJ_Project\Metadata\SnapshotGroup\{20d0cd11-8ff2-4c6d-a0db-64d7a19ee65a}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\Event\{12e16e9a-364c-452c-8665-22433ced6b8f}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\ParameterPresetFolder\{efb1f79e-d636-4693-842f-843a3f2c67ec}.xml" />
+     <None Include="Assets\GGJ_Project\Metadata\AudioFile\{a845a5e9-48c6-4b19-a997-e7d089f102c3}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\AudioFile\{74e062b9-f8d3-45b2-8857-c46a550af4ea}.xml" />
+     <None Include="Assets\GGJ_Project\Metadata\AudioFile\{24cc7003-e502-4ec3-a30e-511d388cbccd}.xml" />
      <None Include="Assets\GGJ_Project\Metadata\AudioFile\{bb83ddb3-1c46-477a-bc12-1ed5285195cc}.xml" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/2020.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

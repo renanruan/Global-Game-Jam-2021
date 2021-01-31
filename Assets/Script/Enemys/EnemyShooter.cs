@@ -36,7 +36,7 @@ public class EnemyShooter : MonoBehaviour
     {
         ShootAction.Invoke();
         Vector2 targetPosition = target.transform.position;
-        BulletIA bulletIA = Instantiate(Bullet, transform.position, Quaternion.Euler(0, 0, 0)).GetComponent<BulletIA>();
+        BulletIA bulletIA = Instantiate(Bullet, ShootPoint.transform.position, Quaternion.Euler(0, 0, 0)).GetComponent<BulletIA>();
         bulletIA.ConfigureDirection((targetPosition - (Vector2)transform.position).normalized);
     }
 

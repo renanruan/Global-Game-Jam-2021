@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemySpawnPoint : MonoBehaviour
 {
-    public static List<EnemySpawnPoint> List = new List<EnemySpawnPoint>();
+    public static List<EnemySpawnPoint> List;
+
 
     private void Start()
     {

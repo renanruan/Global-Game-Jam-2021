@@ -19,7 +19,7 @@ public class Task : MonoBehaviour
     public float TimeHold;
     public float BeenHolding;
     public bool TimerActive = false;
-    public float MinTime, MaxTime;
+    public float TaksConclusionTime;
 
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -47,19 +47,25 @@ public class Task : MonoBehaviour
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  AVAILABILITY CALLS */
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    void OnTimerTick()
+    public void Activate()
     {
         IsAvailable = true;
         anim.SetBool("Available", IsAvailable);
-        TimerActive = false;
-        TimerTime = 0;
+        TimerActive = true;
+        TimerTime = TaksConclusionTime;
+        TaskManager.TManeger.totalTasks++;
     }
     void OnTaskConclusion()
     {
         IsAvailable = false;
         anim.SetBool("Available", IsAvailable);
-        TimerActive = true;
-        TimerTime = Random.Range(MinTime, MaxTime);
+        TimerActive = false;
+        TaskManager.TManeger.totalTasks--;
+
+    }
+    void OnTimerTick()
+    {
+        GameManager.GM.Loose();
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -83,6 +89,11 @@ public class Task : MonoBehaviour
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     private void Update()
     {
+        if(!GameManager.GM.Playing)
+        {
+            return;
+        }
+
         if (TimerActive)
         {
             TimerTime -= Time.deltaTime;
@@ -108,10 +119,5 @@ public class Task : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void Start()
-    {
-        TimerActive = true;
     }
 }
