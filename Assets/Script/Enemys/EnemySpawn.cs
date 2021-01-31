@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class EnemySpawn : MonoBehaviour
 {
+    public static EnemySpawn ESpawn;
+
     [Header("UI")]
     public Text WaveText;
 
@@ -29,12 +31,22 @@ public class EnemySpawn : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        ESpawn = this;
+    }
+
     private void Start()
     {
         timer = Random.Range(MinWaveInterval, MaxWaveInterval);
     }
     private void Update()
     {
+        if (!GameManager.GM.Playing)
+        {
+            return;
+        }
+
         timer -= Time.deltaTime;
 
         if (timer < 0)
@@ -43,7 +55,7 @@ public class EnemySpawn : MonoBehaviour
             {
                 timer = Random.Range(MinWaveInterval, MaxWaveInterval);
                 CurrentWave++;
-                WaveText.text = "Wave " + CurrentWave;
+                WaveText.text = "Wave " + CurrentWave + 1;
             }
             else
             {

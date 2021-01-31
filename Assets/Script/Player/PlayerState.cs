@@ -27,7 +27,8 @@ public class PlayerState : MonoBehaviour
 
     private void Awake()
     {
-        Player = gameObject;    
+        Player = gameObject;
+        ActualMode = Mode.MechaZord;
     }
 
     private void Start()

@@ -30,8 +30,11 @@ public class PhysicsObject : MonoBehaviour
     void Update()
     {
         targetVelocity = Vector2.zero;
-        ComputeVelocity();
-        CheckInput();
+        if (GameManager.GM.Playing)
+        {
+            ComputeVelocity();
+            CheckInput();
+        }
     }
 
     protected virtual void ComputeVelocity()
