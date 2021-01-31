@@ -249,9 +249,9 @@ MonoBehaviour:
   InContact: 0
   TimerTime: 0
   TimeHold: 3
+  BeenHolding: 0
   TimerActive: 0
-  MinTime: 5
-  MaxTime: 6
+  TaksConclusionTime: 0
 --- !u!95 &3828595052522074651
 Animator:
   serializedVersion: 3
