@@ -242,11 +242,11 @@ MonoBehaviour:
   Path: Assets/GGJ_Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637476806105421627
+  lastModified: 637476941892404716
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1626
+    Value: 1746
   Exists: 1
 --- !u!114 &-6567962079477120406
 MonoBehaviour:
@@ -306,7 +306,7 @@ MonoBehaviour:
   Path: Assets/GGJ_Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637476919278703102
+  lastModified: 637476941892344631
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -373,7 +373,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2004512447074337494}
+  - {fileID: 5071839408501384342}
   MinDistance: 0
   MaxDistance: 0
   Length: 3889
@@ -397,7 +397,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -8817633126512924543}
+  - {fileID: -836789666469309049}
   MinDistance: 0
   MaxDistance: 0
   Length: 169411
@@ -434,6 +434,26 @@ MonoBehaviour:
   m_Name: parameter:/sfx_engine/Moving
   m_EditorClassIdentifier: 
   Name: Moving
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-836789666469309049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus_Stage_01/head
+  m_EditorClassIdentifier: 
+  Name: head
   Min: 0
   Max: 1
   Default: 0
@@ -481,6 +501,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-652922988651321601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/sfx_new_task
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/sfx_new_task
+  guid: 3f7af0530f99ba45b46e213babdb2514
+  Banks:
+  - {fileID: -6033124470288966965}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1933
 --- !u!114 &-534378031612681580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,12 +620,15 @@ MonoBehaviour:
   - {fileID: 1132748383821164533}
   - {fileID: 6899924550953499073}
   - {fileID: 8937886562496705861}
+  - {fileID: -652922988651321601}
+  - {fileID: 2706699755524087637}
+  - {fileID: 2438909466375947664}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6033124470288966965}
   StringsBanks:
   - {fileID: -6709824168589382076}
-  stringsBankWriteTime: 637476806105421627
+  stringsBankWriteTime: 637476941892404716
   cacheVersion: 6
 --- !u!114 &25856952565270659
 MonoBehaviour:
@@ -773,6 +819,72 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &2438909466375947664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/sfx_reload
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/sfx_reload
+  guid: 90c88bf8c9a8d6488de259198f147c64
+  Banks:
+  - {fileID: -6033124470288966965}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3000
+--- !u!114 &2532792414047068536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_engine/Moving
+  m_EditorClassIdentifier: 
+  Name: Moving
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2706699755524087637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/sfx_task_complete
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/sfx_task_complete
+  guid: 5931991dd355324c8c61e4dde8b1e280
+  Banks:
+  - {fileID: -6033124470288966965}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &3860894559414267675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,6 +928,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 666
+--- !u!114 &5071839408501384342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_machinegun_rotation/Shooting
+  m_EditorClassIdentifier: 
+  Name: Shooting
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5535607018315921273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,7 +1214,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7916921797548852809}
+  - {fileID: 2532792414047068536}
   MinDistance: 0
   MaxDistance: 0
   Length: 5333

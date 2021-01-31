@@ -16,7 +16,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if(collision.gameObject.tag == "EnemyBullet")
         {
-            TakeDamege.Invoke(10);
+            TakeDamege.Invoke(collision.gameObject.GetComponent<BulletIA>().Damage);
             collision.GetComponent<BulletIA>().HitDamage();
         }
         else

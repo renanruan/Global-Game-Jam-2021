@@ -21,6 +21,7 @@ public class EnemyHealth : MonoBehaviour
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     private void Start()
     {
+        MaxHealth += EnemySpawn.ESpawn.CurrentWave * (5 + EnemySpawn.ESpawn.CurrentWave / 20);
         CurrentHealth = MaxHealth;
     }
 

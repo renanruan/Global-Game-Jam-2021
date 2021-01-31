@@ -46,4 +46,14 @@ public class PlayerAnime : MonoBehaviour
     {
         animator.SetFloat("Charge", num * 10f);
     }
+
+    public void ReloadOn()
+    {
+        animator.SetBool("Reload", true);
+    }
+
+    public void ReloadOff()
+    {
+        animator.SetBool("Reload", false);
+    }
 }

@@ -13,6 +13,10 @@ public class PlayerSound : MonoBehaviour
     public FMODUnity.StudioEventEmitter RetrieveHead;
     public FMODUnity.StudioEventEmitter LevelMusic;
     public FMODUnity.StudioEventEmitter TakeDamage;
+    public FMODUnity.StudioEventEmitter Reloading;
+
+    private bool available = false;
+    private float timer = 0.5f;
 
     public void SoundStepOn()
     {
@@ -32,6 +36,17 @@ public class PlayerSound : MonoBehaviour
     public void StopEngine()
     {
         Engine.SetParameter("Moving", 0);
+    }
+
+    public void MachineGun(float f)
+    {
+        if (!available)
+            return;
+
+        if(f == 0)
+        {
+            StartMachineGun();
+        }
     }
 
     public void StartMachineGun()
@@ -65,5 +80,23 @@ public class PlayerSound : MonoBehaviour
     public void TakesDamage(int i)
     {
         TakeDamage.Play();
+    }
+
+    public void Reload()
+    {
+        Reloading.Play();
+        GunRot.SetParameter("Shooting", 0);
+    }
+
+
+    private void Update()
+    {
+        timer -= Time.deltaTime;
+
+        if (timer <= 0)
+        {
+            available = true;
+            this.enabled = false;
+        }
     }
 }

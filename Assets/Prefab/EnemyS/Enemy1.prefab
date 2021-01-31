@@ -56,10 +56,11 @@ MonoBehaviour:
   animator: {fileID: 6773922381437984332}
   Health: {fileID: 4465994473831079357}
   Shooter: {fileID: 5546705519426774047}
+  Collider: {fileID: 2576497749952023112}
   target: {fileID: 0}
-  maxLookDistance: 6
-  maxAttackDistance: 3
-  minDistanceFromPlayer: 0
+  maxLookDistance: 7
+  maxAttackDistance: 5.5
+  minDistanceFromPlayer: 5
   targetLocker: 0
   Direction: {x: 0, y: 0}
   Moving: 0
@@ -78,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384cebcd0d39fcf448586292063784eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 6099302649772665830, guid: 8f288d0b6d38cae4ca5ddd1aad924a1a, type: 3}
+  Bullet: {fileID: 2963244850937067292, guid: e161c11ec199b394796a8c6b22e949fe, type: 3}
   ShootPoint: {fileID: 4371332676205788591}
   AttackSpeed: 3
   IsShooting: 0
@@ -147,7 +148,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!95 &6773922381437984332
 Animator:
@@ -204,7 +205,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4
 --- !u!1 &407845192685775793
 GameObject:
   m_ObjectHideFlags: 0

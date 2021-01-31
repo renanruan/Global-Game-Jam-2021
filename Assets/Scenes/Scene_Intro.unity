@@ -352,7 +352,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Gustavo
+  m_Text: 'Gustavo Boas
+
 
 '
 --- !u!222 &206002499
@@ -640,7 +641,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 171}
-  m_SizeDelta: {x: 600, y: 150}
+  m_SizeDelta: {x: 900, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667926190
 MonoBehaviour:
@@ -675,9 +676,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Jogo
-
-'
+  m_Text: "N\xE3o perca a cabe\xE7a"
 --- !u!222 &667926191
 CanvasRenderer:
   m_ObjectHideFlags: 0

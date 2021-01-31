@@ -9,6 +9,9 @@ public class Task : MonoBehaviour
     public FMODUnity.StudioEventEmitter SAcept;
     public FMODUnity.StudioEventEmitter SDeny;
     public FMODUnity.StudioEventEmitter SHov;
+    public FMODUnity.StudioEventEmitter SClick;
+    public FMODUnity.StudioEventEmitter SAppear;
+    public SpriteRenderer Arrow;
 
     [Header("State Machine")]
     public bool IsAvailable = false;
@@ -54,6 +57,7 @@ public class Task : MonoBehaviour
         TimerActive = true;
         TimerTime = TaksConclusionTime;
         TaskManager.TManeger.totalTasks++;
+        SoundAppear();
     }
     void OnTaskConclusion()
     {
@@ -65,6 +69,7 @@ public class Task : MonoBehaviour
     }
     void OnTimerTick()
     {
+        GameManager.GM.looseMessage.text = "Tarefa não concluida a tempo...";
         GameManager.GM.Loose();
     }
 
@@ -82,6 +87,16 @@ public class Task : MonoBehaviour
     public void SoundHover()
     {
         SHov.Play();
+    }
+
+    public void SoundAppear()
+    {
+        SAppear.Play();
+    }
+
+    public void SoundClick()
+    {
+        SClick.Play();
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -109,6 +124,7 @@ public class Task : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 BeenHolding = TimeHold;
+                SoundClick();
             }
             else if (Input.GetKey(KeyCode.E))
             {
@@ -116,8 +132,17 @@ public class Task : MonoBehaviour
                 if(BeenHolding <= 0)
                 {
                     OnTaskConclusion();
+                    BeenHolding = TimeHold;
                 }
             }
         }
+
+        float perc =  BeenHolding / TimeHold;
+        Arrow.color = new Color(perc, perc, perc);
+    }
+
+    private void Start()
+    {
+        BeenHolding = TimeHold;
     }
 }

@@ -140,14 +140,15 @@ MonoBehaviour:
   animator: {fileID: 1429897014564151495}
   Health: {fileID: 8080490213830173494}
   Shooter: {fileID: 81089044237294228}
+  Collider: {fileID: 7933163634000852163}
   target: {fileID: 0}
-  maxLookDistance: 6
+  maxLookDistance: 15
   maxAttackDistance: 3
-  minDistanceFromPlayer: 0
+  minDistanceFromPlayer: 2
   targetLocker: 0
   Direction: {x: 0, y: 0}
   Moving: 0
-  Speed: 2
+  Speed: 2.5
   SoundDie: {fileID: 3407472337493600978}
   SoundShoot: {fileID: 5654951187661373949}
 --- !u!114 &81089044237294228
@@ -162,9 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384cebcd0d39fcf448586292063784eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 6099302649772665830, guid: 8f288d0b6d38cae4ca5ddd1aad924a1a, type: 3}
+  Bullet: {fileID: 6098731704378326853, guid: 485ad8b389862a94aafa6307d4fc7489, type: 3}
   ShootPoint: {fileID: 3860573677985876683}
-  AttackSpeed: 3
+  AttackSpeed: 5
   IsShooting: 0
   target: {fileID: 0}
 --- !u!114 &8080490213830173494
@@ -179,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e2d0fcf71e7b84cad2e60b159b1c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 50
+  MaxHealth: 30
   HealthBar: {fileID: 0}
 --- !u!212 &28905496393281170
 SpriteRenderer:
@@ -231,7 +232,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!95 &1429897014564151495
 Animator:
@@ -288,7 +289,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!1 &7387780042576116277
 GameObject:
   m_ObjectHideFlags: 0

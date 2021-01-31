@@ -23,7 +23,7 @@ public class EnemySpawn : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        if (EnemyIA.EnemysAlive < 10 + (int)(CurrentWave / 3))
+        if (EnemyIA.EnemysAlive < 10 + (int)(CurrentWave * 3))
         {
             int enemyId = Waves[CurrentWave].GetRandomEnemy();
             Transform parent = EnemySpawnPoint.GetSpawnPoint();
@@ -55,7 +55,7 @@ public class EnemySpawn : MonoBehaviour
             {
                 timer = Random.Range(MinWaveInterval, MaxWaveInterval);
                 CurrentWave++;
-                WaveText.text = "Wave " + CurrentWave + 1;
+                WaveText.text = "Wave " + (CurrentWave + 1).ToString();
             }
             else
             {

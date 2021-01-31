@@ -46,7 +46,6 @@ public class PlayerState : MonoBehaviour
 
         /* EVENTOS DE CONTROLE */
         Control.StartShooting += Shooter.StartShootingRoutine;
-        Control.StartShooting += Sounds.StartMachineGun;
         Control.StartShooting += Animator.StartShooting;
 
         Control.StopShooting += Shooter.EndShootingRoutine;
@@ -65,12 +64,17 @@ public class PlayerState : MonoBehaviour
         Collision.MechaFound += ChangeState;
 
         /* EVENTOS DE VIDA */
-        //Health.OnDeath += ;
+        Health.OnDeath += Control.DesactiveCollider;
+        Health.OnDeath += DeathMessage;
         Health.OnShieldBreak += ChangeState;
 
         /* EVENTOS DE TIRO */
         Shooter.Charge.AddListener(Animator.ChargeGun);
+        Shooter.Charge.AddListener(Sounds.MachineGun);
         Shooter.OneShot += Sounds.Shoot;
+        Shooter.ReloadOn += Sounds.Reload;
+        Shooter.ReloadOn += Animator.ReloadOn;
+        Shooter.ReloadOff += Animator.ReloadOff;
 
         /* EVENTOS DE SOM */
         //Sound. += ;
@@ -111,6 +115,11 @@ public class PlayerState : MonoBehaviour
     void BecameMecha()
     {
         SpotScript.Desactive();
+    }
+
+    public void DeathMessage()
+    {
+        GameManager.GM.looseMessage.text = "Parece que perdeu a cageça!";
     }
 
     

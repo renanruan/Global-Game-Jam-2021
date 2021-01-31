@@ -14,6 +14,7 @@ public class BulletIA : MonoBehaviour
     public Size Tamanho;
     public FMODUnity.StudioEventEmitter HitSound;
     public SpriteRenderer HitSprite;
+    public int Damage;
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  INITIAL CONFIGURATION */
@@ -43,7 +44,7 @@ public class BulletIA : MonoBehaviour
         TimeSpawn -= Time.deltaTime;
         if(TimeSpawn <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
 
@@ -54,14 +55,27 @@ public class BulletIA : MonoBehaviour
     {
         if(collision.gameObject.tag == "Wall")
         {
-            Destroy(gameObject);
+            DieAnimation();
         }
     }
 
     public void HitDamage()
     {
         HitSound.Play();
+        DieAnimation();
+        
+    }
+
+    public void DieAnimation()
+    {
+        GetComponent<Animator>().SetBool("Die", true);
+        TimeSpawn = 0.05f;
+        Direction = Vector3.zero;
+    }
+
+    public void Die()
+    {
         HitSprite.enabled = false;
-        TimeSpawn = 0.2f;
+        Destroy(gameObject);
     }
 }

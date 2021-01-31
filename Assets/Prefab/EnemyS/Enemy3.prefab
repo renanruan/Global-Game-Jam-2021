@@ -194,14 +194,15 @@ MonoBehaviour:
   animator: {fileID: 7142184559618735301}
   Health: {fileID: 64611494473006900}
   Shooter: {fileID: 8207307603598296726}
+  Collider: {fileID: 2224323624830806209}
   target: {fileID: 0}
-  maxLookDistance: 6
-  maxAttackDistance: 3
-  minDistanceFromPlayer: 0
+  maxLookDistance: 10
+  maxAttackDistance: 9
+  minDistanceFromPlayer: 8
   targetLocker: 0
   Direction: {x: 0, y: 0}
   Moving: 0
-  Speed: 0.75
+  Speed: 0.5
   SoundDie: {fileID: 6885976135434303184}
   SoundShoot: {fileID: 4520572661744311807}
 --- !u!114 &8207307603598296726
@@ -216,9 +217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384cebcd0d39fcf448586292063784eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 6099302649772665830, guid: 8f288d0b6d38cae4ca5ddd1aad924a1a, type: 3}
+  Bullet: {fileID: 6559826206601904697, guid: a764f6a8feed4364d814facc1a329523, type: 3}
   ShootPoint: {fileID: 2205168868649056212}
-  AttackSpeed: 3
+  AttackSpeed: 2
   IsShooting: 0
   target: {fileID: 0}
 --- !u!114 &64611494473006900
@@ -233,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e2d0fcf71e7b84cad2e60b159b1c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 50
+  MaxHealth: 75
   HealthBar: {fileID: 0}
 --- !u!212 &8115646657967010448
 SpriteRenderer:
@@ -285,7 +286,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!95 &7142184559618735301
 Animator:
