@@ -8,6 +8,8 @@ using UnityEngine.Events;
 
 public class EnemyIA : MonoBehaviour
 {
+    public static int EnemysAlive = 0;
+
     [Header("Self Parts")]
     public SpriteRenderer sprite;
     public Animator animator;
@@ -29,6 +31,10 @@ public class EnemyIA : MonoBehaviour
     private float Timer = 0;
 
     [Header("Actions")]
+    public FMODUnity.StudioEventEmitter SoundDie;
+    public FMODUnity.StudioEventEmitter SoundShoot;
+
+    [Header("Actions")]
     public UnityIntAction TakeDamege = new UnityIntAction();
     public UnityAction StartShooting;
     public UnityAction StopShooting;
@@ -39,6 +45,7 @@ public class EnemyIA : MonoBehaviour
     private void Start()
     {
         target = PlayerState.Player.transform;
+        EnemysAlive++;
 
         /* EVENTOS DE IA */
         TakeDamege.AddListener(Health.TakeDamage);
@@ -50,7 +57,7 @@ public class EnemyIA : MonoBehaviour
 
         /* EVENTOS DE TIRO */
         Shooter.target = target;
-
+        Shooter.ShootAction += Shoot;
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -75,6 +82,7 @@ public class EnemyIA : MonoBehaviour
                 if (hit.collider.gameObject.tag == "Player")
                 {
                     LookAtTarget();
+                    animator.SetFloat("Speed", 0);
 
                     // Atira no player
                     if (distance <= maxAttackDistance)
@@ -130,9 +138,19 @@ public class EnemyIA : MonoBehaviour
                     newDirection = Vector2.left;
                     break;
             }
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, newDirection, 0.6f, LayerMask.GetMask("Default"));
+            if (hit.collider != null)
+            {
+                if (hit.collider.gameObject.tag == "Wall")
+                {
+                    newDirection = Direction;
+                }
+            }
         } while (newDirection == Direction && forceChange);
 
         Direction = newDirection;
+        transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(Direction.y, Direction.x) * Mathf.Rad2Deg + 90);
     }
 
     public void Move()
@@ -141,7 +159,20 @@ public class EnemyIA : MonoBehaviour
 
         if(Moving)
         {
+            animator.SetFloat("Speed", 1);
             transform.position += (Vector3)Direction * Speed * Time.deltaTime;
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Direction, 0.6f, LayerMask.GetMask("Default"));
+            if (hit.collider != null)
+            {
+                if (hit.collider.gameObject.tag == "Wall")
+                {
+                    ChangeDirection(true);
+                    return;
+                }
+            }
+
+            
 
             if (Timer <= 0)
             {
@@ -155,9 +186,13 @@ public class EnemyIA : MonoBehaviour
                 else
                 {
                     Moving = false;
+                    animator.SetFloat("Speed", 0);
                     Timer = Random.Range(1, 3);
+                    return;
                 }
             }
+
+            
         }
         else
         {
@@ -168,7 +203,9 @@ public class EnemyIA : MonoBehaviour
                 Timer = Random.Range(3, 7);
             }
         }
-            
+
+        
+
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -195,16 +232,30 @@ public class EnemyIA : MonoBehaviour
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     public void Death()
     {
+        SoundDie.Play();
+        animator.SetBool("Morto", true);
+        EnemysAlive--;
+        this.enabled = false;
+        Shooter.enabled = false;
+    }
+
+    public void Die()
+    {
         Destroy(gameObject);
     }
 
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    /*  SHOOT */
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
- 
+    public void Shoot()
+    {
+        SoundShoot.Play();
+    }
 
 
 
 
- 
 
 
     /*

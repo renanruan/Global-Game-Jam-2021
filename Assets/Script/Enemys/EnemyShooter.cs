@@ -15,6 +15,9 @@ public class EnemyShooter : MonoBehaviour
     public bool IsShooting = false;
     public Transform target;
 
+    [Header("Actions")]
+    public UnityAction ShootAction;
+
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  SHOOT ROUTINE */
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -31,6 +34,7 @@ public class EnemyShooter : MonoBehaviour
     }
     private void Shoot()
     {
+        ShootAction.Invoke();
         Vector2 targetPosition = target.transform.position;
         BulletIA bulletIA = Instantiate(Bullet, transform.position, Quaternion.Euler(0, 0, 0)).GetComponent<BulletIA>();
         bulletIA.ConfigureDirection((targetPosition - (Vector2)transform.position).normalized);

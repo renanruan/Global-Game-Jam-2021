@@ -6,6 +6,9 @@ public class Task : MonoBehaviour
 {
     [Header("Self Parts")]
     public Animator anim;
+    public FMODUnity.StudioEventEmitter SAcept;
+    public FMODUnity.StudioEventEmitter SDeny;
+    public FMODUnity.StudioEventEmitter SHov;
 
     [Header("State Machine")]
     public bool IsAvailable = false;
@@ -13,6 +16,8 @@ public class Task : MonoBehaviour
 
     [Header("Timer Settings")]
     public float TimerTime;
+    public float TimeHold;
+    public float BeenHolding;
     public bool TimerActive = false;
     public float MinTime, MaxTime;
 
@@ -25,6 +30,7 @@ public class Task : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             InContact = true;
+            BeenHolding = TimeHold;
             anim.SetBool("Collided", InContact);
         }
     }
@@ -56,6 +62,21 @@ public class Task : MonoBehaviour
         TimerTime = Random.Range(MinTime, MaxTime);
     }
 
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    /*  SOUNDS */
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    public void SoundAccept()
+    {
+        SAcept.Play();
+    }
+    public void SoundDeny()
+    {
+        SDeny.Play();
+    }
+    public void SoundHover()
+    {
+        SHov.Play();
+    }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     /*  TIMER RUNNING */
@@ -76,7 +97,15 @@ public class Task : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                OnTaskConclusion();
+                BeenHolding = TimeHold;
+            }
+            else if (Input.GetKey(KeyCode.E))
+            {
+                BeenHolding -= Time.deltaTime;
+                if(BeenHolding <= 0)
+                {
+                    OnTaskConclusion();
+                }
             }
         }
     }
