@@ -44,9 +44,6 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{f961ad1a-a6b6-4e2d-bc73-368f3082a6b9}">
-		<property name="uiTrackHeight">
-			<value>28</value>
-		</property>
 		<relationship name="mixerGroup">
 			<destination>{6bb4e479-4fc8-445c-96f3-de5a763ff0f1}</destination>
 		</relationship>
@@ -66,15 +63,8 @@
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{92bb75e9-4842-44ec-b8bb-e0bafdf2617a}" />
-	<object class="MarkerTrack" id="{a3471a11-89f5-46b3-971a-98aa870099b1}">
-		<property name="uiTrackHeight">
-			<value>100</value>
-		</property>
-	</object>
+	<object class="MarkerTrack" id="{a3471a11-89f5-46b3-971a-98aa870099b1}" />
 	<object class="GroupTrack" id="{ae0e23f1-7d8e-41ec-a39d-4da656fd4e6c}">
-		<property name="uiTrackHeight">
-			<value>100</value>
-		</property>
 		<relationship name="automationTracks">
 			<destination>{a44ff3ac-d94f-4d71-88d5-fbf65946d1c1}</destination>
 			<destination>{21fb6465-3cbb-4630-9cd0-775559f272ad}</destination>
@@ -119,17 +109,11 @@
 	</object>
 	<object class="MixerBusPanner" id="{9bbc14eb-feee-45ec-ab22-39edda799f00}" />
 	<object class="AutomationTrack" id="{a44ff3ac-d94f-4d71-88d5-fbf65946d1c1}">
-		<property name="uiTrackHeight">
-			<value>100</value>
-		</property>
 		<relationship name="automator">
 			<destination>{2958a582-fa12-44d3-8d37-b32e5a49a3d7}</destination>
 		</relationship>
 	</object>
 	<object class="AutomationTrack" id="{21fb6465-3cbb-4630-9cd0-775559f272ad}">
-		<property name="uiTrackHeight">
-			<value>100</value>
-		</property>
 		<relationship name="automator">
 			<destination>{af39a750-73c7-4c20-b1e3-8f003a9ea2a7}</destination>
 		</relationship>
@@ -232,10 +216,10 @@
 	</object>
 	<object class="AutomationPoint" id="{a4a2da0e-5c0a-49cd-8df3-fe2640754b89}">
 		<property name="position">
-			<value>0.015536723163841807</value>
+			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-9</value>
+			<value>3</value>
 		</property>
 	</object>
 	<object class="Automator" id="{2958a582-fa12-44d3-8d37-b32e5a49a3d7}">
@@ -268,7 +252,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>150</value>
+			<value>2600</value>
 		</property>
 	</object>
 </objects>
