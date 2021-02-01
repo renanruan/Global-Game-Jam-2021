@@ -1,0 +1,1 @@
+Executavel para MS Windows 10
